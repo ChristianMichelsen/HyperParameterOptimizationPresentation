@@ -3,3 +3,5 @@ Hyperparameter optimization presentation given 15th May 2019 at the master level
 
 The slides can be seen __[here](https://christianmichelsen.github.io/HyperParameterOptimizationPresentation/)__ 
 and the notebook `HyperparameterOptimization.ipynb` contains all of the background code.
+
+To run the slides properly, press `spacebar`. 
