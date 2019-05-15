@@ -13394,10 +13394,10 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Pulsar_data.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/Pulsar_data.csv&#39;</span><span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -13412,7 +13412,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13544,7 +13544,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span>
@@ -13581,7 +13581,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13702,7 +13702,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -13718,7 +13718,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13745,7 +13745,7 @@ Name: Class, dtype: int64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13761,7 +13761,7 @@ Name: Class, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13791,7 +13791,7 @@ Name: Class, dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fit_and_grapth_estimator</span><span class="p">(</span><span class="n">estimator</span><span class="p">):</span>
@@ -13842,13 +13842,13 @@ Name: Class, dtype: int64</pre>
 
  
  
-<div id="f0f708b7-2392-4d4e-b805-643381b3dba6"></div>
+<div id="0bb9d88c-7ac9-4986-b0a7-a093e2f958e9"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
+var element = $('#0bb9d88c-7ac9-4986-b0a7-a093e2f958e9');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "322eb20252a5447d99538b6006c882d2", "version_major": 2, "version_minor": 0}
+{"model_id": "5805ceb92ea443c78ff603bf8c53e293", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13876,7 +13876,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_manual</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> 
@@ -13934,7 +13934,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="GridSearch.png" alt="title"></p>
+<p><img src="./images/GridSearch.png" alt="title"></p>
 
 </div>
 </div>
@@ -13949,7 +13949,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_GridSearch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
@@ -13964,7 +13964,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_DecisionTree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -13977,7 +13977,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf_DecisionTree</span><span class="p">,</span> 
@@ -13995,7 +13995,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">);</span>
@@ -14008,7 +14008,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>        
@@ -14021,7 +14021,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grid Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{GridSearch.best_score_:.4f}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -14053,7 +14053,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span>
@@ -14069,7 +14069,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14118,10 +14118,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.003473</td>
-      <td>0.000367</td>
-      <td>0.001180</td>
-      <td>0.000063</td>
+      <td>0.003215</td>
+      <td>0.000519</td>
+      <td>0.001119</td>
+      <td>0.000106</td>
       <td>1</td>
       <td>1</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 1}</td>
@@ -14142,10 +14142,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>1</th>
-      <td>0.003123</td>
-      <td>0.000253</td>
-      <td>0.001321</td>
-      <td>0.000207</td>
+      <td>0.003098</td>
+      <td>0.000738</td>
+      <td>0.001186</td>
+      <td>0.000288</td>
       <td>1</td>
       <td>10</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 10}</td>
@@ -14166,10 +14166,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>2</th>
-      <td>0.002749</td>
-      <td>0.000144</td>
-      <td>0.001059</td>
-      <td>0.000107</td>
+      <td>0.003308</td>
+      <td>0.000303</td>
+      <td>0.001301</td>
+      <td>0.000283</td>
       <td>1</td>
       <td>100</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 100}</td>
@@ -14190,10 +14190,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>3</th>
-      <td>0.007866</td>
-      <td>0.000687</td>
-      <td>0.001200</td>
-      <td>0.000156</td>
+      <td>0.007238</td>
+      <td>0.000515</td>
+      <td>0.000904</td>
+      <td>0.000070</td>
       <td>10</td>
       <td>1</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 1}</td>
@@ -14214,10 +14214,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>4</th>
-      <td>0.006552</td>
-      <td>0.000206</td>
-      <td>0.000956</td>
-      <td>0.000059</td>
+      <td>0.006682</td>
+      <td>0.000185</td>
+      <td>0.000970</td>
+      <td>0.000079</td>
       <td>10</td>
       <td>10</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 10}</td>
@@ -14238,10 +14238,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>5</th>
-      <td>0.004531</td>
-      <td>0.000169</td>
-      <td>0.001063</td>
-      <td>0.000069</td>
+      <td>0.004256</td>
+      <td>0.000199</td>
+      <td>0.000859</td>
+      <td>0.000076</td>
       <td>10</td>
       <td>100</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 100}</td>
@@ -14262,10 +14262,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>6</th>
-      <td>0.007885</td>
-      <td>0.000215</td>
-      <td>0.001032</td>
-      <td>0.000049</td>
+      <td>0.007730</td>
+      <td>0.000350</td>
+      <td>0.000939</td>
+      <td>0.000125</td>
       <td>100</td>
       <td>1</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 1}</td>
@@ -14286,10 +14286,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>7</th>
-      <td>0.006780</td>
-      <td>0.000213</td>
-      <td>0.000984</td>
-      <td>0.000124</td>
+      <td>0.006831</td>
+      <td>0.000256</td>
+      <td>0.001107</td>
+      <td>0.000127</td>
       <td>100</td>
       <td>10</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 10}</td>
@@ -14310,10 +14310,10 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
     </tr>
     <tr>
       <th>8</th>
-      <td>0.004509</td>
-      <td>0.000217</td>
-      <td>0.000937</td>
-      <td>0.000069</td>
+      <td>0.004235</td>
+      <td>0.000103</td>
+      <td>0.000906</td>
+      <td>0.000106</td>
       <td>100</td>
       <td>100</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 100}</td>
@@ -14346,7 +14346,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_GridSearch</span> <span class="o">=</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -14359,7 +14359,7 @@ var element = $('#f0f708b7-2392-4d4e-b805-643381b3dba6');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_GridSearch</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_GridSearch</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -14418,7 +14418,7 @@ $$ y_{\mathrm{GS}} = B^{1/N}, \quad y_{\mathrm{RS}} = B  $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="RandomSearch.png" alt="Random Search" width="400"/></p>
+<p><img src="./images/RandomSearch.png" alt="Random Search" width="400"/></p>
 
 </div>
 </div>
@@ -14454,7 +14454,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># specify parameters and distributions to sample from</span>
@@ -14469,7 +14469,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run randomized search</span>
@@ -14490,7 +14490,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fit the random search instance</span>
@@ -14504,7 +14504,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">RandomSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>                 
@@ -14536,7 +14536,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14552,7 +14552,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14601,10 +14601,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.005541</td>
-      <td>0.000327</td>
-      <td>0.001136</td>
-      <td>0.000203</td>
+      <td>0.005127</td>
+      <td>0.000380</td>
+      <td>0.000986</td>
+      <td>0.000137</td>
       <td>23</td>
       <td>72</td>
       <td>{'max_depth': 23, 'min_samples_leaf': 72}</td>
@@ -14625,10 +14625,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.005265</td>
-      <td>0.000723</td>
-      <td>0.001016</td>
-      <td>0.000124</td>
+      <td>0.005380</td>
+      <td>0.000307</td>
+      <td>0.001125</td>
+      <td>0.000159</td>
       <td>26</td>
       <td>83</td>
       <td>{'max_depth': 26, 'min_samples_leaf': 83}</td>
@@ -14649,10 +14649,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.006634</td>
-      <td>0.000433</td>
-      <td>0.001157</td>
-      <td>0.000126</td>
+      <td>0.006069</td>
+      <td>0.000371</td>
+      <td>0.000918</td>
+      <td>0.000050</td>
       <td>17</td>
       <td>24</td>
       <td>{'max_depth': 17, 'min_samples_leaf': 24}</td>
@@ -14673,9 +14673,9 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.004533</td>
-      <td>0.000143</td>
-      <td>0.000931</td>
+      <td>0.004235</td>
+      <td>0.000113</td>
+      <td>0.000825</td>
       <td>0.000058</td>
       <td>27</td>
       <td>88</td>
@@ -14697,10 +14697,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.005221</td>
-      <td>0.000362</td>
-      <td>0.001047</td>
-      <td>0.000137</td>
+      <td>0.004400</td>
+      <td>0.000110</td>
+      <td>0.000805</td>
+      <td>0.000038</td>
       <td>31</td>
       <td>64</td>
       <td>{'max_depth': 31, 'min_samples_leaf': 64}</td>
@@ -14721,10 +14721,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.004624</td>
-      <td>0.000195</td>
-      <td>0.000945</td>
-      <td>0.000111</td>
+      <td>0.004096</td>
+      <td>0.000131</td>
+      <td>0.000779</td>
+      <td>0.000045</td>
       <td>27</td>
       <td>89</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 89}</td>
@@ -14745,10 +14745,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.005376</td>
-      <td>0.000317</td>
-      <td>0.000942</td>
-      <td>0.000138</td>
+      <td>0.005079</td>
+      <td>0.000276</td>
+      <td>0.000863</td>
+      <td>0.000052</td>
       <td>22</td>
       <td>42</td>
       <td>{'max_depth': 22, 'min_samples_leaf': 42}</td>
@@ -14769,10 +14769,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.005001</td>
-      <td>0.000258</td>
-      <td>0.000968</td>
-      <td>0.000070</td>
+      <td>0.004881</td>
+      <td>0.000123</td>
+      <td>0.000867</td>
+      <td>0.000074</td>
       <td>21</td>
       <td>62</td>
       <td>{'max_depth': 21, 'min_samples_leaf': 62}</td>
@@ -14793,10 +14793,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.004964</td>
-      <td>0.000198</td>
-      <td>0.000940</td>
-      <td>0.000077</td>
+      <td>0.005074</td>
+      <td>0.000284</td>
+      <td>0.000874</td>
+      <td>0.000045</td>
       <td>20</td>
       <td>64</td>
       <td>{'max_depth': 20, 'min_samples_leaf': 64}</td>
@@ -14829,7 +14829,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_RandomSearch</span> <span class="o">=</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -14904,7 +14904,7 @@ Accuracy Random Search: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="BO1.png" alt="Bayesian Optimization 1" width="600"/></p>
+<p><img src="./images/BO1.png" alt="Bayesian Optimization 1" width="600"/></p>
 
 </div>
 </div>
@@ -14912,7 +14912,7 @@ Accuracy Random Search: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="BO2.png" alt="Bayesian Optimization 2" width="600"/></p>
+<p><img src="./images/BO2.png" alt="Bayesian Optimization 2" width="600"/></p>
 
 </div>
 </div>
@@ -14920,7 +14920,7 @@ Accuracy Random Search: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="BO3.png" alt="Bayesian Optimization 3" width="600"/></p>
+<p><img src="./images/BO3.png" alt="Bayesian Optimization 3" width="600"/></p>
 
 </div>
 </div>
@@ -14935,7 +14935,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_opt</span> <span class="k">import</span> <span class="n">BayesianOptimization</span>
@@ -14965,7 +14965,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">optimize_DecisionTree</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -14997,7 +14997,7 @@ Accuracy Random Search: 0.8430
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_BayesianOptimization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> 
@@ -15048,7 +15048,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">BayesianOptimization</span><span class="o">.</span><span class="n">max</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
@@ -15061,7 +15061,7 @@ Accuracy Random Search: 0.8430
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_BO</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
@@ -15075,7 +15075,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_BayesianOptimization</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_BO</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -15128,7 +15128,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_depth_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -15164,7 +15164,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 29/29 [00:06&lt;00:00,  4.31it/s]
+<pre>100%|██████████| 29/29 [00:06&lt;00:00,  4.22it/s]
 </pre>
 </div>
 </div>
@@ -15183,7 +15183,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -15232,7 +15232,7 @@ Accuracy Bayesian Optimization: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Chart.png" alt="Chart" width="800"/></p>
+<p><img src="./images/Chart.png" alt="Chart" width="800"/></p>
 
 </div>
 </div>
@@ -15263,7 +15263,7 @@ Accuracy Bayesian Optimization: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Ex1.png" alt="Example 1" width="800"/></p>
+<p><img src="./images/Ex1.png" alt="Example 1" width="800"/></p>
 
 </div>
 </div>
@@ -15271,7 +15271,7 @@ Accuracy Bayesian Optimization: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Ex2.png" alt="Example 2" width="600"/></p>
+<p><img src="./images/Ex2.png" alt="Example 2" width="600"/></p>
 
 </div>
 </div>
@@ -15279,7 +15279,7 @@ Accuracy Bayesian Optimization: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Ex3.png" alt="Example 3" width="600"/></p>
+<p><img src="./images/Ex3.png" alt="Example 3" width="600"/></p>
 
 </div>
 </div>
@@ -15287,7 +15287,7 @@ Accuracy Bayesian Optimization: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Ex4.png" alt="Example 4" width="800"/></p>
+<p><img src="./images/Ex4.png" alt="Example 4" width="800"/></p>
 
 </div>
 </div>
