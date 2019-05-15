@@ -3,3 +3,4 @@ reveal.js/
 .gitignore
 .gitmodules
 .ipynb_checkpoints/
+.DS_STORE
