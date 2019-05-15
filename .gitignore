@@ -1,3 +1,5 @@
-*reveal
-reveal.js/*
-.*
+reveal*
+reveal.js/
+.gitignore
+.gitmodules
+.ipynb_checkpoints
