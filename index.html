@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13069,45 +13068,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13244,7 +13204,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Hyperparameter-Optimization-Example">Hyperparameter Optimization Example<a class="anchor-link" href="#Hyperparameter-Optimization-Example">&#182;</a></h1><h3 id="Author-and-Date:">Author and Date:<a class="anchor-link" href="#Author-and-Date:">&#182;</a></h3><ul>
 <li>Christian Michelsen (Niels Bohr Institute)   </li>
-<li>15-05-2019 (latest update)</li>
+<li>29-04-2020 (latest update)</li>
 </ul>
 <hr>
 
@@ -13284,6 +13244,7 @@ a.anchor-link {
 <li>Bayesian optimization</li>
 <li>"Full" scan over parameter space</li>
 <li>Other Examples</li>
+<li>New methods</li>
 </ol>
 
 </div>
@@ -13360,23 +13321,23 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span><span class="p">,</span> <span class="n">export_graphviz</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">tree</span>
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span><span class="p">,</span> <span class="n">load_wine</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span>
-<span class="kn">from</span> <span class="nn">graphviz</span> <span class="k">import</span> <span class="n">Source</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span>                               
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interactive</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span><span class="p">,</span> <span class="n">export_graphviz</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span><span class="p">,</span> <span class="n">load_wine</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+<span class="kn">from</span> <span class="nn">graphviz</span> <span class="kn">import</span> <span class="n">Source</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>                               
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interactive</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">RandomizedSearchCV</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">poisson</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">poisson</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="k">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 </pre></div>
 
     </div>
@@ -13394,7 +13355,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/Pulsar_data.csv&#39;</span><span class="p">)</span>
@@ -13412,7 +13373,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13544,7 +13505,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span>
@@ -13581,7 +13542,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13702,7 +13663,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -13718,7 +13679,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13745,7 +13706,7 @@ Name: Class, dtype: int64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13761,7 +13722,7 @@ Name: Class, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13791,7 +13752,7 @@ Name: Class, dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fit_and_grapth_estimator</span><span class="p">(</span><span class="n">estimator</span><span class="p">):</span>
@@ -13799,7 +13760,7 @@ Name: Class, dtype: int64</pre>
     <span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     
     <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">estimator</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Training Accuracy: </span><span class="si">{accuracy:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Training Accuracy: </span><span class="si">{accuracy:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="n">class_names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">nunique</span><span class="p">())]</span>
     <span class="n">graph</span> <span class="o">=</span> <span class="n">Source</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> 
@@ -13842,13 +13803,13 @@ Name: Class, dtype: int64</pre>
 
  
  
-<div id="4c445dd7-3b29-4376-9e2c-7a08f8b5c04f"></div>
+<div id="a8a27736-c76e-46f8-87e4-56fa4d6fe091"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
+var element = $('#a8a27736-c76e-46f8-87e4-56fa4d6fe091');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "5805ceb92ea443c78ff603bf8c53e293", "version_major": 2, "version_minor": 0}
+{"model_id": "baf2a89ef908406a9bc49384e10acfb1", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13876,7 +13837,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_manual</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> 
@@ -13885,7 +13846,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 
 <span class="n">clf_manual</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">accuracy_manual</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_manual</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Manual: </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Manual: </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13949,7 +13910,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_GridSearch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
@@ -13964,7 +13925,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_DecisionTree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -13977,7 +13938,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf_DecisionTree</span><span class="p">,</span> 
@@ -13995,7 +13956,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">);</span>
@@ -14008,7 +13969,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>        
@@ -14021,10 +13982,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grid Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{GridSearch.best_score_:.4f}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grid Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{GridSearch.best_score_:.4f}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14053,7 +14014,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span>
@@ -14069,7 +14030,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14118,10 +14079,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.003215</td>
-      <td>0.000519</td>
-      <td>0.001119</td>
-      <td>0.000106</td>
+      <td>0.002943</td>
+      <td>0.000348</td>
+      <td>0.001141</td>
+      <td>0.000132</td>
       <td>1</td>
       <td>1</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 1}</td>
@@ -14142,10 +14103,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>1</th>
-      <td>0.003098</td>
-      <td>0.000738</td>
-      <td>0.001186</td>
-      <td>0.000288</td>
+      <td>0.003372</td>
+      <td>0.000436</td>
+      <td>0.001316</td>
+      <td>0.000337</td>
       <td>1</td>
       <td>10</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 10}</td>
@@ -14166,10 +14127,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>2</th>
-      <td>0.003308</td>
-      <td>0.000303</td>
-      <td>0.001301</td>
-      <td>0.000283</td>
+      <td>0.003167</td>
+      <td>0.000347</td>
+      <td>0.001235</td>
+      <td>0.000192</td>
       <td>1</td>
       <td>100</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 100}</td>
@@ -14190,10 +14151,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>3</th>
-      <td>0.007238</td>
-      <td>0.000515</td>
-      <td>0.000904</td>
-      <td>0.000070</td>
+      <td>0.009747</td>
+      <td>0.000646</td>
+      <td>0.002139</td>
+      <td>0.001174</td>
       <td>10</td>
       <td>1</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 1}</td>
@@ -14214,10 +14175,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>4</th>
-      <td>0.006682</td>
-      <td>0.000185</td>
-      <td>0.000970</td>
-      <td>0.000079</td>
+      <td>0.008352</td>
+      <td>0.000889</td>
+      <td>0.001251</td>
+      <td>0.000153</td>
       <td>10</td>
       <td>10</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 10}</td>
@@ -14238,10 +14199,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>5</th>
-      <td>0.004256</td>
-      <td>0.000199</td>
-      <td>0.000859</td>
-      <td>0.000076</td>
+      <td>0.005978</td>
+      <td>0.000407</td>
+      <td>0.001574</td>
+      <td>0.000259</td>
       <td>10</td>
       <td>100</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 100}</td>
@@ -14262,10 +14223,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>6</th>
-      <td>0.007730</td>
-      <td>0.000350</td>
-      <td>0.000939</td>
-      <td>0.000125</td>
+      <td>0.008789</td>
+      <td>0.000798</td>
+      <td>0.001278</td>
+      <td>0.000206</td>
       <td>100</td>
       <td>1</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 1}</td>
@@ -14286,10 +14247,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>7</th>
-      <td>0.006831</td>
-      <td>0.000256</td>
-      <td>0.001107</td>
-      <td>0.000127</td>
+      <td>0.007366</td>
+      <td>0.000978</td>
+      <td>0.001154</td>
+      <td>0.000148</td>
       <td>100</td>
       <td>10</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 10}</td>
@@ -14310,10 +14271,10 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
     </tr>
     <tr>
       <th>8</th>
-      <td>0.004235</td>
-      <td>0.000103</td>
-      <td>0.000906</td>
-      <td>0.000106</td>
+      <td>0.004732</td>
+      <td>0.000340</td>
+      <td>0.001133</td>
+      <td>0.000218</td>
       <td>100</td>
       <td>100</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 100}</td>
@@ -14346,7 +14307,7 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_GridSearch</span> <span class="o">=</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -14359,12 +14320,12 @@ var element = $('#4c445dd7-3b29-4376-9e2c-7a08f8b5c04f');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_GridSearch</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_GridSearch</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Manual:      </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Grid Search: </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Manual:      </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Grid Search: </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14454,7 +14415,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># specify parameters and distributions to sample from</span>
@@ -14469,7 +14430,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run randomized search</span>
@@ -14490,7 +14451,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fit the random search instance</span>
@@ -14504,11 +14465,11 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">RandomSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>                 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{RandomSearch.best_score_:.3f}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{RandomSearch.best_score_:.3f}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14536,7 +14497,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14552,7 +14513,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14601,10 +14562,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.005127</td>
-      <td>0.000380</td>
-      <td>0.000986</td>
-      <td>0.000137</td>
+      <td>0.005320</td>
+      <td>0.000370</td>
+      <td>0.001341</td>
+      <td>0.000378</td>
       <td>23</td>
       <td>72</td>
       <td>{'max_depth': 23, 'min_samples_leaf': 72}</td>
@@ -14625,10 +14586,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.005380</td>
-      <td>0.000307</td>
-      <td>0.001125</td>
-      <td>0.000159</td>
+      <td>0.005886</td>
+      <td>0.000392</td>
+      <td>0.001208</td>
+      <td>0.000186</td>
       <td>26</td>
       <td>83</td>
       <td>{'max_depth': 26, 'min_samples_leaf': 83}</td>
@@ -14649,10 +14610,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.006069</td>
-      <td>0.000371</td>
-      <td>0.000918</td>
-      <td>0.000050</td>
+      <td>0.007346</td>
+      <td>0.000623</td>
+      <td>0.001814</td>
+      <td>0.000796</td>
       <td>17</td>
       <td>24</td>
       <td>{'max_depth': 17, 'min_samples_leaf': 24}</td>
@@ -14673,10 +14634,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.004235</td>
-      <td>0.000113</td>
-      <td>0.000825</td>
-      <td>0.000058</td>
+      <td>0.004911</td>
+      <td>0.000484</td>
+      <td>0.001056</td>
+      <td>0.000124</td>
       <td>27</td>
       <td>88</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 88}</td>
@@ -14697,10 +14658,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.004400</td>
-      <td>0.000110</td>
-      <td>0.000805</td>
-      <td>0.000038</td>
+      <td>0.004958</td>
+      <td>0.000237</td>
+      <td>0.000927</td>
+      <td>0.000088</td>
       <td>31</td>
       <td>64</td>
       <td>{'max_depth': 31, 'min_samples_leaf': 64}</td>
@@ -14721,10 +14682,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.004096</td>
-      <td>0.000131</td>
-      <td>0.000779</td>
-      <td>0.000045</td>
+      <td>0.004577</td>
+      <td>0.000156</td>
+      <td>0.001026</td>
+      <td>0.000304</td>
       <td>27</td>
       <td>89</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 89}</td>
@@ -14745,10 +14706,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.005079</td>
-      <td>0.000276</td>
-      <td>0.000863</td>
-      <td>0.000052</td>
+      <td>0.006640</td>
+      <td>0.000860</td>
+      <td>0.001449</td>
+      <td>0.000303</td>
       <td>22</td>
       <td>42</td>
       <td>{'max_depth': 22, 'min_samples_leaf': 42}</td>
@@ -14769,10 +14730,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.004881</td>
-      <td>0.000123</td>
-      <td>0.000867</td>
-      <td>0.000074</td>
+      <td>0.005768</td>
+      <td>0.000622</td>
+      <td>0.001191</td>
+      <td>0.000216</td>
       <td>21</td>
       <td>62</td>
       <td>{'max_depth': 21, 'min_samples_leaf': 62}</td>
@@ -14793,10 +14754,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.005074</td>
-      <td>0.000284</td>
-      <td>0.000874</td>
-      <td>0.000045</td>
+      <td>0.005511</td>
+      <td>0.000685</td>
+      <td>0.001089</td>
+      <td>0.000071</td>
       <td>20</td>
       <td>64</td>
       <td>{'max_depth': 20, 'min_samples_leaf': 64}</td>
@@ -14829,15 +14790,15 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_RandomSearch</span> <span class="o">=</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
 
 <span class="n">accuracy_RandomSearch</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_RandomSearch</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Manual:        </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Grid search:   </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Random Search: </span><span class="si">{accuracy_RandomSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Manual:        </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Grid search:   </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Random Search: </span><span class="si">{accuracy_RandomSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14920,7 +14881,7 @@ Accuracy Random Search: 0.8430
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/BO3.png" alt="Bayesian Optimization 3" width="600"/></p>
+<p><img src="./images/comparison_rs_bo.png" alt="BO vs. RS" width="600"/></p>
 
 </div>
 </div>
@@ -14935,11 +14896,11 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_opt</span> <span class="k">import</span> <span class="n">BayesianOptimization</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">cross_val_score</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_opt</span> <span class="kn">import</span> <span class="n">BayesianOptimization</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
 
 <span class="k">def</span> <span class="nf">DecisionTree_CrossValidation</span><span class="p">(</span><span class="n">max_depth</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decision Tree cross validation.</span>
@@ -14965,7 +14926,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">optimize_DecisionTree</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -14997,7 +14958,7 @@ Accuracy Random Search: 0.8430
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_BayesianOptimization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> 
@@ -15048,7 +15009,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">BayesianOptimization</span><span class="o">.</span><span class="n">max</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
@@ -15061,7 +15022,7 @@ Accuracy Random Search: 0.8430
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_BO</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
@@ -15075,14 +15036,14 @@ Accuracy Random Search: 0.8430
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_BayesianOptimization</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_BO</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Manual:                </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Grid Search:           </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Random Search:         </span><span class="si">{accuracy_RandomSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Accuracy Bayesian Optimization: </span><span class="si">{accuracy_BayesianOptimization:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Manual:                </span><span class="si">{accuracy_manual:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Grid Search:           </span><span class="si">{accuracy_GridSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Random Search:         </span><span class="si">{accuracy_RandomSearch:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy Bayesian Optimization: </span><span class="si">{accuracy_BayesianOptimization:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15128,7 +15089,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_depth_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -15164,7 +15125,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 29/29 [00:06&lt;00:00,  4.22it/s]
+<pre>100%|██████████| 29/29 [00:07&lt;00:00,  3.14it/s]
 </pre>
 </div>
 </div>
@@ -15183,7 +15144,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -15211,7 +15172,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15302,6 +15263,40 @@ Accuracy Bayesian Optimization: 0.8430
 </div>
 </div>
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-F:-New-Methods">Part F: New Methods<a class="anchor-link" href="#Part-F:-New-Methods">&#182;</a></h2><p>Bayesian Optimization meets HyperBand (BOHB)</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>HyperBand:</p>
+<p><img src="./images/sh.gif" alt="BO vs. RS" width="600"/></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/comparison_rs_bo.png" alt="BO vs. RS" width="600"/></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/comparison-1.png" alt="BOHB" width="600"/></p>
+<p><strong><a href="https://www.automl.org/blog_bohb/">BOHB: Robust and Efficient Hyperparameter Optimization at Scale</a></strong></p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
