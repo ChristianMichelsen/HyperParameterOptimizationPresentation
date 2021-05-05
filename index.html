@@ -114,3272 +114,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
 <style type="text/css">
-    @font-face {
- font-family: "Roboto Mono";
- font-weight: normal;
- font-style: normal;
- src: local('"Roboto Mono"'), url('fonts/roboto.ttf') format('truetype');
-}
-@font-face {
- font-family: "Roboto Mono";
- font-weight: normal;
- font-style: italic;
- src: local('"Roboto Mono"'), url('fonts/roboto-italic.ttf') format('truetype');
-}
-div#notebook {
- font-family: sans-serif;
- font-size: 10pt;
- line-height: 170%;
- color: #b5c2d9;
- -webkit-font-smoothing: antialiased !important;
- padding-top: 25px !important;
-}
-body,
-div.body {
- font-family: sans-serif;
- font-size: 10pt;
- color: #899ab8;
- background-color: #1d1e23;
- background: #1d1e23;
- -webkit-font-smoothing: antialiased !important;
-}
-body.notebook_app {
- padding: 0;
- background-color: #1d1e23;
- background: #1d1e23;
- padding-right: 0px !important;
- overflow-y: hidden;
-}
-a {
- font-family: sans-serif;
- color: #899ab8;
- -webkit-font-smoothing: antialiased !important;
-}
-a:hover,
-a:focus {
- color: #bbc2e0;
- -webkit-font-smoothing: antialiased !important;
-}
-div#maintoolbar {
- position: absolute;
- width: 90%;
- margin-left: -10%;
- padding-right: 8%;
- float: left;
- background: transparent !important;
-}
-#maintoolbar {
- margin-bottom: -3px;
- margin-top: 0px;
- border: 0px;
- min-height: 27px;
- padding-top: 2px;
- padding-bottom: 0px;
-}
-#maintoolbar .container {
- width: 75%;
- margin-right: auto;
- margin-left: auto;
-}
-.list_header,
-div#notebook_list_header.row.list_header {
- font-size: 14pt;
- color: #bbc2e0;
- background-color: transparent;
- height: 35px;
-}
-i.fa.fa-folder {
- display: inline-block;
- font: normal normal normal 14px "FontAwesome";
- font-family: "FontAwesome" !important;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- font-size: 18px;
- -moz-osx-font-smoothing: grayscale;
-}
-#running .panel-group .panel .panel-heading {
- font-size: 14pt;
- color: #899ab8;
- padding: 8px 8px;
- background: #2e3642;
- background-color: #2e3642;
-}
-#running .panel-group .panel .panel-heading a {
- font-size: 14pt;
- color: #899ab8;
-}
-#running .panel-group .panel .panel-heading a:focus,
-#running .panel-group .panel .panel-heading a:hover {
- font-size: 14pt;
- color: #899ab8;
-}
-#running .panel-group .panel .panel-body .list_container .list_item {
- background: #384152;
- background-color: #384152;
- padding: 2px;
- border-bottom: 2px solid rgba(80,92,133,.22);
-}
-#running .panel-group .panel .panel-body .list_container .list_item:hover {
- background: #384152;
- background-color: #384152;
-}
-#running .panel-group .panel .panel-body {
- padding: 2px;
-}
-button#refresh_running_list {
- border: none !important;
-}
-button#refresh_cluster_list {
- border: none !important;
-}
-div.running_list_info.toolbar_info {
- font-size: 15px;
- padding: 4px 0 4px 0;
- margin-top: 5px;
- margin-bottom: 8px;
- height: 24px;
- line-height: 24px;
- text-shadow: none;
-}
-.list_placeholder {
- font-weight: normal;
-}
-#tree-selector {
- padding: 0px;
- border-color: transparent;
-}
-#project_name > ul > li > a > i.fa.fa-home {
- color: #7aa05d;
- font-size: 17pt;
- display: inline-block;
- position: static;
- padding: 0px 0px;
- font-weight: normal;
- text-align: center;
- vertical-align: text-top;
-}
-.fa-folder:before {
- color: #4c8be2;
-}
-.fa-arrow-up:before {
- font-size: 14px;
-}
-.fa-arrow-down:before {
- font-size: 14px;
-}
-span#last-modified.btn.btn-xs.btn-default.sort-action:hover .fa,
-span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
- color: #7aa05d;
-}
-.folder_icon:before {
- display: inline-block;
- font: normal normal normal 14px/1 FontAwesome;
- font-size: inherit;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- content: "\f07b";
- color: #4c8be2;
-}
-.notebook_icon:before {
- display: inline-block;
- font: normal normal normal 14px/1 FontAwesome;
- font-size: inherit;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- content: "\f02d";
- position: relative;
- color: #94c273 !important;
- top: 0px;
-}
-.file_icon:before {
- display: inline-block;
- font: normal normal normal 14px/1 FontAwesome;
- font-size: inherit;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- content: "\f15b";
- position: relative;
- top: 0px;
- color: #899ab8 !important;
-}
-#project_name a {
- display: inline-flex;
- padding-left: 7px;
- margin-left: -2px;
- text-align: -webkit-auto;
- vertical-align: baseline;
- font-size: 18px;
-}
-div#notebook_toolbar div.dynamic-instructions {
- font-family: sans-serif;
- font-size: 17px;
- color: #526488;
-}
-span#login_widget > .button,
-#logout {
- font-family: "Proxima Nova", sans-serif;
- color: #899ab8;
- background: transparent;
- background-color: transparent;
- border: 2px solid #303542;
- font-weight: normal;
- box-shadow: none;
- text-shadow: none;
- border-radius: 3px;
- margin-right: 10px;
- padding: 2px 7px;
-}
-span#login_widget > .button:hover,
-#logout:hover {
- color: #7aa05d;
- background-color: transparent;
- background: transparent;
- border: 2px solid #7aa05d;
- background-image: none;
- box-shadow: none !important;
- border-radius: 3px;
-}
-span#login_widget > .button:focus,
-#logout:focus,
-span#login_widget > .button.focus,
-#logout.focus,
-span#login_widget > .button:active,
-#logout:active,
-span#login_widget > .button.active,
-#logout.active,
-.open > .dropdown-togglespan#login_widget > .button,
-.open > .dropdown-toggle#logout {
- color: #d8dcee;
- background-color: #899ab8;
- background: #899ab8;
- border-color: #899ab8;
- background-image: none;
- box-shadow: none !important;
- border-radius: 2px;
-}
-body > #header #header-container {
- padding-bottom: 0px;
- padding-top: 4px;
- box-sizing: border-box;
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
-}
-body > #header {
- background: #1d1e23;
- background-color: #1d1e23;
- position: relative;
- z-index: 100;
-}
-.list_container {
- font-size: 10pt;
- color: #899ab8;
- border: none;
- text-shadow: none !important;
-}
-.list_container > div {
- border-bottom: 1px solid rgba(80,92,133,.22);
- font-size: 10pt;
-}
-.list_header > div,
-.list_item > div {
- padding-top: 6px;
- padding-bottom: 2px;
- padding-left: 0px;
-}
-.list_header > div .item_link,
-.list_item > div .item_link {
- margin-left: -1px;
- vertical-align: middle;
- line-height: 22px;
- font-size: 10pt;
-}
-.item_icon {
- color: #4c8be2;
- font-size: 13pt;
- vertical-align: middle;
-}
-.list_item input:not([type="checkbox"]) {
- padding-right: 0px;
- height: 1.75em;
- width: 25%;
- margin: 0px 0 0;
- margin-top: 0px;
-}
-.list_header > div .item_link,
-.list_item > div .item_link {
- margin-left: -1px;
- vertical-align: middle;
- line-height: 1.5em;
- font-size: 12pt;
- display: inline-table;
- position: static;
-}
-#button-select-all {
- height: 34px;
- min-width: 55px;
- z-index: 0;
- border: none !important;
- padding-top: 0px;
- padding-bottom: 0px;
- margin-bottom: 0px;
- margin-top: 0px;
- left: -3px;
- border-radius: 0px !important;
-}
-#button-select-all:focus,
-#button-select-all:active:focus,
-#button-select-all.active:focus,
-#button-select-all.focus,
-#button-select-all:active.focus,
-#button-select-all.active.focus {
- background-color: #303542 !important;
- background: #303542 !important;
-}
-button#tree-selector-btn {
- height: 34px;
- font-size: 9.0pt;
- border: none;
- left: 0px;
- border-radius: 0px !important;
-}
-input#select-all.pull-left.tree-selector {
- margin-left: 7px;
- margin-right: 2px;
- margin-top: 2px;
- top: 4px;
-}
-input[type="radio"],
-input[type="checkbox"] {
- margin-top: 1px;
- line-height: normal;
-}
-.delete-button {
- border: none !important;
-}
-i.fa.fa-trash {
- font-size: 13.5pt;
-}
-.list_container a {
- font-size: 16px;
- color: #899ab8;
- border: none;
- text-shadow: none !important;
- font-weight: normal;
- font-style: normal;
-}
-div.list_container a:hover {
- color: #bbc2e0;
-}
-.list_header > div input,
-.list_item > div input {
- margin-right: 7px;
- margin-left: 12px;
- vertical-align: baseline;
- line-height: 22px;
- position: relative;
- top: -1px;
-}
-div.list_item:hover {
- background-color: rgba(80,90,133,.06);
-}
-.breadcrumb > li {
- font-size: 9.0pt;
- color: #899ab8;
- border: none;
- text-shadow: none !important;
-}
-.breadcrumb > li + li:before {
- content: "/\00a0";
- padding: 0px;
- color: #899ab8;
- font-size: 18px;
-}
-#project_name > .breadcrumb {
- padding: 0px;
- margin-bottom: 0px;
- background-color: transparent;
- font-weight: normal;
- margin-top: -2px;
-}
-ul#tabs a {
- font-family: sans-serif;
- font-size: 13.5pt;
- font-weight: normal;
- font-style: normal;
- text-shadow: none !important;
-}
-.nav-tabs {
- font-family: sans-serif;
- font-size: 13.5pt;
- font-weight: normal;
- font-style: normal;
- background-color: transparent;
- border-color: transparent;
- text-shadow: none !important;
- border: 2px solid transparent;
-}
-.nav-tabs > li > a:active,
-.nav-tabs > li > a:focus,
-.nav-tabs > li > a:hover,
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
- color: #7aa05d;
- background-color: transparent;
- border-color: transparent;
- border-bottom: 2px solid transparent;
-}
-.nav > li.disabled > a,
-.nav > li.disabled > a:hover {
- color: #526488;
-}
-.nav-tabs > li > a:before {
- content: "";
- position: absolute;
- width: 100%;
- height: 2px;
- bottom: -2px;
- left: 0;
- background-color: #7aa05d;
- visibility: hidden;
- -webkit-transform: perspective(0)scaleX(0);
- transform: perspective(0)scaleX(0);
- -webkit-transition: ease 220ms;
- transition: ease 220ms;
- -webkit-font-smoothing: antialiased !important;
-}
-.nav-tabs > li > a:hover:before {
- visibility: visible;
- -webkit-transform: perspective(1)scaleX(1);
- transform: perspective(1)scaleX(1);
-}
-.nav-tabs > li.active > a:before {
- content: "";
- position: absolute;
- width: 100%;
- height: 2px;
- bottom: -2px;
- left: 0;
- background-color: #7aa05d;
- visibility: visible;
- -webkit-transform: perspective(1)scaleX(1);
- transform: perspective(1)scaleX(1);
- -webkit-font-smoothing: subpixel-antialiased !important;
-}
-div#notebook {
- font-family: sans-serif;
- font-size: 10pt;
- padding-top: 4px;
-}
-.notebook_app {
- background-color: #1d1e23;
-}
-#notebook-container {
- padding: 13px 2px;
- background-color: #1d1e23;
- min-height: 0px;
- box-shadow: none;
- width: 65%;
- margin-right: auto;
- margin-left: auto;
-}
-div#ipython-main-app.container {
- width: 65%;
- margin-right: auto;
- margin-left: auto;
- margin-right: auto;
- margin-left: auto;
-}
-.container {
- width: 65%;
- margin-right: auto;
- margin-left: auto;
-}
-div#menubar-container {
- width: 100%;
- width: 65%;
-}
-div#header-container {
- width: 65%;
-}
-.notebook_app #header,
-.edit_app #header {
- box-shadow: none !important;
- background-color: #1d1e23;
- border-bottom: 2px solid rgba(80,92,133,.22);
-}
-#header,
-.edit_app #header {
- font-family: sans-serif;
- font-size: 10pt;
- box-shadow: none;
- background-color: #1d1e23;
-}
-#header .header-bar,
-.edit_app #header .header-bar {
- background: #1d1e23;
- background-color: #1d1e23;
-}
-body > #header .header-bar {
- width: 100%;
- background: #1d1e23;
-}
-span.checkpoint_status,
-span.autosave_status {
- font-size: small;
- display: none;
-}
-#menubar,
-div#menubar {
- background-color: #1d1e23;
- padding-top: 0px !important;
-}
-#menubar .navbar,
-.navbar-default {
- background-color: #1d1e23;
- margin-bottom: 0px;
- margin-top: 0px;
-}
-.navbar {
- border: none;
-}
-div.navbar-text,
-.navbar-text,
-.navbar-text.indicator_area,
-p.navbar-text.indicator_area {
- margin-top: 8px !important;
- margin-bottom: 0px;
- color: #7aa05d;
-}
-.navbar-default {
- font-family: sans-serif;
- font-size: 10pt;
- background-color: #1d1e23;
- border-color: #313643;
- line-height: 1.5em;
- padding-bottom: 0px;
-}
-.navbar-default .navbar-nav > li > a {
- font-family: sans-serif;
- font-size: 10pt;
- color: #899ab8;
- display: block;
- line-height: 1.5em;
- padding-top: 14px;
- padding-bottom: 11px;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
- color: #bbc2e0 !important;
- background-color: rgba(80,92,133,.22) !important;
- border-color: #313643 !important;
- line-height: 1.5em;
- transition: 80ms ease;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
- color: #d8dcee;
- background-color: #353b49;
- border-color: #353b49;
- line-height: 1.5em;
-}
-.navbar-nav > li > .dropdown-menu {
- margin-top: 0px;
-}
-.navbar-nav {
- margin: 0;
-}
-div.notification_widget.info,
-.notification_widget.info,
-.notification_widget:active:hover,
-.notification_widget.active:hover,
-.open > .dropdown-toggle.notification_widget:hover,
-.notification_widget:active:focus,
-.notification_widget.active:focus,
-.open > .dropdown-toggle.notification_widget:focus,
-.notification_widget:active.focus,
-.notification_widget.active.focus,
-.open > .dropdown-toggle.notification_widget.focus,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
- color: #899ab8 !important;
- background-color: transparent !important;
- border-color: transparent !important;
- padding-bottom: 0px !important;
- margin-bottom: 0px !important;
- font-size: 9pt !important;
- z-index: 0;
-}
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
- font-size: 9pt !important;
- z-index: 0;
-}
-.notification_widget {
- color: #4c8be2;
- z-index: -500;
- font-size: 9pt;
- background: transparent;
- background-color: transparent;
- margin-right: 3px;
- border: none;
-}
-.notification_widget,
-div.notification_widget {
- margin-right: 0px;
- margin-left: 0px;
- padding-right: 0px;
- vertical-align: text-top !important;
- margin-top: 6px !important;
- background: transparent !important;
- background-color: transparent !important;
- font-size: 9pt !important;
- border: none;
-}
-.navbar-btn.btn-xs:hover {
- border: none !important;
- background: transparent !important;
- background-color: transparent !important;
- color: #899ab8 !important;
-}
-div.notification_widget.info,
-.notification_widget.info {
- display: none !important;
-}
-.edit_mode .modal_indicator:before {
- display: none;
-}
-.command_mode .modal_indicator:before {
- display: none;
-}
-.item_icon {
- color: #4c8be2;
-}
-.item_buttons .kernel-name {
- font-size: 10pt;
- color: #4c8be2;
-}
-.running_notebook_icon:before {
- color: #94c273 !important;
- font: normal normal normal 15px/1 FontAwesome;
- font-size: 15px;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- content: "\f10c";
- vertical-align: middle;
- position: static;
- display: inherit;
-}
-.item_buttons .running-indicator {
- padding-top: 4px;
- color: #94c273;
- font-family: sans-serif;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
-}
-#notification_trusted {
- font-family: sans-serif;
- border: none;
- background: transparent;
- background-color: transparent;
- margin-bottom: 0px !important;
- vertical-align: bottom !important;
- color: #526488 !important;
- cursor: default !important;
-}
-#notification_area,
-div.notification_area {
- float: right !important;
- position: static;
- cursor: pointer;
- padding-top: 6px;
- padding-right: 4px;
-}
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
- font-size: 9pt !important;
- z-index: 0;
- margin-top: -5px !important;
-}
-#modal_indicator {
- float: right !important;
- color: #4c8be2;
- background: #1d1e23;
- background-color: #1d1e23;
- margin-top: 8px !important;
- margin-left: 0px;
-}
-#kernel_indicator {
- float: right !important;
- color: #7aa05d;
- background: #1d1e23;
- background-color: #1d1e23;
- border-left: 2px solid #7aa05d;
- padding-top: 0px;
- padding-bottom: 4px;
- margin-top: 10px !important;
- margin-left: -2px;
- padding-left: 5px !important;
-}
-#kernel_indicator .kernel_indicator_name {
- font-size: 17px;
- color: #7aa05d;
- background: #1d1e23;
- background-color: #1d1e23;
- padding-left: 5px;
- padding-right: 5px;
- margin-top: 4px;
- vertical-align: text-top;
- padding-bottom: 0px;
-}
-.kernel_idle_icon:before {
- display: inline-block;
- font: normal normal normal 22px/1 FontAwesome;
- font-size: 22px;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- cursor: pointer;
- margin-left: 0px !important;
- opacity: 0.7;
- vertical-align: bottom;
- margin-top: 1px;
- content: "\f1db";
-}
-.kernel_busy_icon:before {
- display: inline-block;
- font: normal normal normal 22px/1 FontAwesome;
- font-size: 22px;
- -webkit-animation: pulsate 2s infinite ease-out;
- animation: pulsate 2s infinite ease-out;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- cursor: pointer;
- margin-left: 0px !important;
- vertical-align: bottom;
- margin-top: 1px;
- content: "\f111";
-}
-@-webkit-keyframes pulsate {
- 0% {
-  -webkit-transform: scale(1.0,1.0);
-  opacity: 0.8;
- }
- 8% {
-  -webkit-transform: scale(1.0,1.0);
-  opacity: 0.8;
- }
- 50% {
-  -webkit-transform: scale(0.75,0.75);
-  opacity: 0.3;
- }
- 92% {
-  -webkit-transform: scale(1.0,1.0);
-  opacity: 0.8;
- }
- 100% {
-  -webkit-transform: scale(1.0,1.0);
-  opacity: 0.8;
- }
-}
-div.notification_widget.info,
-.notification_widget.info,
-.notification_widget:active:hover,
-.notification_widget.active:hover,
-.open > .dropdown-toggle.notification_widget:hover,
-.notification_widget:active:focus,
-.notification_widget.active:focus,
-.open > .dropdown-toggle.notification_widget:focus,
-.notification_widget:active.focus,
-.notification_widget.active.focus,
-.open > .dropdown-toggle.notification_widget.focus,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
-div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
- color: #899ab8;
- background-color: #1d1e23;
- border-color: #1d1e23;
-}
-#notification_area,
-div.notification_area {
- float: right !important;
- position: static;
-}
-.notification_widget,
-div.notification_widget {
- margin-right: 0px;
- margin-left: 0px;
- padding-right: 0px;
- vertical-align: text-top !important;
- margin-top: 6px !important;
- z-index: 1000;
-}
-#kernel_logo_widget,
-#kernel_logo_widget .current_kernel_logo {
- display: none;
-}
-div#ipython_notebook {
- display: none;
-}
-i.fa.fa-icon {
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- text-rendering: auto;
-}
-.fa {
- display: inline-block;
- font: normal normal normal 10pt/1 "FontAwesome", sans-serif;
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
-}
-.dropdown-menu {
- font-family: sans-serif;
- font-size: 10pt;
- box-shadow: none;
- padding: 0px;
- text-align: left;
- border: none;
- background-color: #353b49;
- background: #353b49;
- line-height: 1;
-}
-.dropdown-menu:hover {
- font-family: sans-serif;
- font-size: 10pt;
- box-shadow: none;
- padding: 0px;
- text-align: left;
- border: none;
- background-color: #353b49;
- box-shadow: none;
- line-height: 1;
-}
-.dropdown-menu > li > a {
- font-family: sans-serif;
- font-size: 9.0pt;
- display: block;
- padding: 10px 20px 9px 10px;
- color: #899ab8;
- background-color: #353b49;
- background: #353b49;
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
- color: #bbc2e0;
- background-color: #313643;
- background: #313643;
- border-color: #313643;
- transition: 200ms ease;
-}
-.dropdown-menu .divider {
- height: 1px;
- margin: 0px 0px;
- overflow: hidden;
- background-color: rgba(80,92,133,.45);
-}
-.dropdown-submenu > .dropdown-menu {
- display: none;
- top: 2px !important;
- left: 100%;
- margin-top: -2px;
- margin-left: 0px;
- padding-top: 0px;
- transition: 200ms ease;
-}
-.dropdown-menu > .disabled > a,
-.dropdown-menu > .disabled > a:hover,
-.dropdown-menu > .disabled > a:focus {
- font-family: sans-serif;
- font-size: 9.0pt;
- font-weight: normal;
- color: #526488;
- padding: none;
- display: block;
- clear: both;
- white-space: nowrap;
-}
-.dropdown-submenu > a:after {
- color: #899ab8;
- margin-right: -16px;
- margin-top: 0px;
- display: inline-block;
-}
-.dropdown-submenu:hover > a:after,
-.dropdown-submenu:active > a:after,
-.dropdown-submenu:focus > a:after,
-.dropdown-submenu:visited > a:after {
- color: #7aa05d;
- margin-right: -16px;
- display: inline-block !important;
-}
-div.kse-dropdown > .dropdown-menu,
-.kse-dropdown > .dropdown-menu {
- min-width: 0;
- top: 94%;
-}
-.btn,
-.btn-default {
- font-family: sans-serif;
- color: #899ab8;
- background: #303542;
- background-color: #303542;
- border: 2px solid #303542;
- font-weight: normal;
- box-shadow: none;
- text-shadow: none;
- border-radius: 3px;
- font-size: initial;
-}
-.btn:hover,
-.btn:active:hover,
-.btn.active:hover,
-.btn-default:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.open > .dropdown-toggle.btn:hover {
- color: #7aa05d;
- border: 2px solid #2a2e39;
- background-color: #2a2e39;
- background: #2a2e39;
- background-image: none;
- box-shadow: none !important;
- border-radius: 3px;
-}
-.btn:active,
-.btn.active,
-.btn:active:focus,
-.btn.active:focus,
-.btn:active.focus,
-.btn.active.focus,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.btn-default:active:hover,
-.btn-default.active:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn:focus,
-.open > .dropdown-toggle.btn.focus,
-.open > .dropdown-toggle.btn-default:hover,
-.open > .dropdown-toggle.btn-default:focus,
-.open > .dropdown-toggle.btn-default.hover,
-.open > .dropdown-toggle.btn-default.focus {
- color: #7aa05d;
- border: 2px solid #2a2e39;
- background-color: #2a2e39 !important;
- background: #2a2e39 !important;
- background-image: none;
- box-shadow: none !important;
- border-radius: 3px;
-}
-.btn-default:active:hover,
-.btn-default.active:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.btn-default:active.focus,
-.btn-default.active.focus {
- color: #8adc4b !important;
- background-color: #303542;
- border-color: #546745 !important;
- transition: 2000ms ease;
-}
-.btn:focus,
-.btn.focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn:active,
-.btn.active,
-.btn:active.focus,
-.btn.active.focus {
- color: #8adc4b !important;
- outline: none !important;
- outline-width: 0px !important;
- background: #546745 !important;
- background-color: #546745 !important;
- border-color: #546745 !important;
- transition: 200ms ease !important;
-}
-.item_buttons > .btn,
-.item_buttons > .btn-group,
-.item_buttons > .input-group {
- font-size: 10pt;
- background: transparent;
- background-color: transparent;
- border: 0px solid #2e3642;
- border-bottom: 2px solid transparent;
- margin-left: 5px;
- padding-top: 4px !important;
-}
-.item_buttons > .btn:hover,
-.item_buttons > .btn-group:hover,
-.item_buttons > .input-group:hover,
-.item_buttons > .btn.active,
-.item_buttons > .btn-group.active,
-.item_buttons > .input-group.active,
-.item_buttons > .btn.focus {
- margin-left: 5px;
- background: #2a313c;
- padding-top: 4px !important;
- background-color: transparent;
- border: 0px solid transparent;
- border-bottom: 2px solid #7aa05d;
- border-radius: 0px;
- transition: none;
-}
-.item_buttons {
- line-height: 1.5em !important;
-}
-.item_buttons .btn {
- min-width: 11ex;
-}
-.btn-group > .btn:first-child {
- margin-left: 3px;
-}
-.btn-group > .btn-mini,
-.btn-sm,
-.btn-group-sm > .btn,
-.btn-xs,
-.btn-group-xs > .btn,
-.alternate_upload .btn-upload,
-.btn-group,
-.btn-group-vertical {
- font-size: inherit;
- font-weight: normal;
- height: inherit;
- line-height: inherit;
-}
-.btn-xs,
-.btn-group-xs > .btn {
- font-size: initial !important;
- background-image: none;
- font-weight: normal;
- text-shadow: none;
- display: inline-table;
- padding: 2px 5px;
- line-height: 1.45;
-}
-.btn-group > .btn:first-child {
- margin-left: 3px;
-}
-div#new-buttons > button,
-#new-buttons > button,
-div#refresh_notebook_list,
-#refresh_notebook_list {
- background: transparent;
- background-color: transparent;
- border: none;
-}
-div#new-buttons > button:hover,
-#new-buttons > button:hover,
-div#refresh_notebook_list,
-#refresh_notebook_list,
-div.alternate_upload .btn-upload,
-.alternate_upload .btn-upload,
-div.dynamic-buttons > button,
-.dynamic-buttons > button,
-.dynamic-buttons > button:focus,
-.dynamic-buttons > button:active:focus,
-.dynamic-buttons > button.active:focus,
-.dynamic-buttons > button.focus,
-.dynamic-buttons > button:active.focus,
-.dynamic-buttons > button.active.focus,
-#new-buttons > button:focus,
-#new-buttons > button:active:focus,
-#new-buttons > button.active:focus,
-#new-buttons > button.focus,
-#new-buttons > button:active.focus,
-#new-buttons > button.active.focus,
-.alternate_upload .btn-upload:focus,
-.alternate_upload .btn-upload:active:focus,
-.alternate_upload .btn-upload.active:focus,
-.alternate_upload .btn-upload.focus,
-.alternate_upload .btn-upload:active.focus,
-.alternate_upload .btn-upload.active.focus {
- background: transparent !important;
- background-color: transparent !important;
- border: none !important;
-}
-.alternate_upload input.fileinput {
- text-align: center;
- vertical-align: bottom;
- margin-left: -.5ex;
- display: inline-table;
- border: solid 0px #303542;
- margin-bottom: -1ex;
-}
-.alternate_upload .btn-upload {
- display: inline-table;
- background: transparent;
- border: none;
-}
-.btn-group .btn + .btn,
-.btn-group .btn + .btn-group,
-.btn-group .btn-group + .btn,
-.btn-group .btn-group + .btn-group {
- margin-left: -2px;
-}
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
- border-bottom-right-radius: 0;
- border-top-right-radius: 0;
- z-index: 2;
-}
-.dropdown-header {
- font-family: sans-serif !important;
- font-size: 10pt !important;
- color: #7aa05d !important;
- border-bottom: none !important;
- padding: 0px !important;
- margin: 6px 6px 0px !important;
-}
-span#last-modified.btn.btn-xs.btn-default.sort-action,
-span#sort-name.btn.btn-xs.btn-default.sort-action,
-span#file-size.btn.btn-xs.btn-default.sort-action {
- font-family: sans-serif;
- font-size: 16px;
- background-color: transparent;
- background: transparent;
- border: none;
- color: #899ab8;
- padding-bottom: 0px;
- margin-bottom: 0px;
- vertical-align: sub;
-}
-span#last-modified.btn.btn-xs.btn-default.sort-action {
- margin-left: 19px;
-}
-button.close {
- border: 0px none;
- font-family: sans-serif;
- font-size: 20pt;
- font-weight: normal;
-}
-.dynamic-buttons {
- padding-top: 0px;
- display: inline-block;
-}
-.close {
- color: #dc6972;
- opacity: .5;
- text-shadow: none;
- font-weight: normal;
-}
-.close:hover {
- color: #dc6972;
- opacity: 1;
- font-weight: normal;
-}
-div.nbext-enable-btns .btn[disabled],
-div.nbext-enable-btns .btn[disabled]:hover,
-.btn-default.disabled,
-.btn-default[disabled],
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
- color: #687b96;
- background: #2e333f;
- background-color: #2e333f;
- border-color: #2e333f;
- transition: 200ms ease;
-}
-.input-group-addon {
- padding: 2px 5px;
- font-size: 10pt;
- font-weight: normal;
- height: auto;
- color: #899ab8;
- text-align: center;
- background-color: transparent;
- border: 2px solid transparent !important;
- text-transform: capitalize;
-}
-a.btn.btn-default.input-group-addon:hover {
- background: transparent !important;
- background-color: transparent !important;
-}
-.btn-group > .btn + .dropdown-toggle {
- padding-left: 8px;
- padding-right: 8px;
- height: 100%;
-}
-.btn-group > .btn + .dropdown-toggle:hover {
- background: #2a2e39 !important;
-}
-.input-group-btn {
- position: relative;
- font-size: inherit;
- white-space: nowrap;
- background: #2e3642;
- background-color: #2e3642;
- border: none;
-}
-.input-group-btn:hover {
- background: #2a313c;
- background-color: #2a313c;
- border: none;
-}
-.input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .btn-group {
- background: #2e3642;
- background-color: #2e3642;
- border: none;
- margin-left: 2px;
- margin-right: -1px;
- font-size: inherit;
-}
-.input-group-btn:first-child > .btn:hover,
-.input-group-btn:first-child > .btn-group:hover {
- background: #2a2e39;
- background-color: #2a2e39;
- border: none;
- font-size: inherit;
- transition: 200ms ease;
-}
-div.modal .btn-group > .btn:first-child {
- background: #2e3642;
- background-color: #2e3642;
- border: 1px solid #2c343f;
- margin-top: 0px !important;
- margin-left: 0px;
- margin-bottom: 2px;
-}
-div.modal .btn-group > .btn:first-child:hover {
- background: #2a313c;
- background-color: #2a313c;
- border: 1px solid #2a313c;
- transition: 200ms ease;
-}
-div.modal > button,
-div.modal-footer > button {
- background: #2e3642;
- background-color: #2e3642;
- border-color: #2e3642;
-}
-div.modal > button:hover,
-div.modal-footer > button:hover {
- background: #2a313c;
- background-color: #2a313c;
- border-color: #2a313c;
- transition: 200ms ease;
-}
-.modal-content {
- font-family: sans-serif;
- font-size: 9.0pt;
- position: relative;
- background: #2e3642;
- background-color: #2e3642;
- border: none;
- border-radius: 1px;
- background-clip: padding-box;
- outline: none;
-}
-.modal-header {
- font-family: sans-serif;
- font-size: 10pt;
- color: #899ab8;
- background: #2e3642;
- background-color: #2e3642;
- border-color: rgba(80,92,133,.22);
- padding: 12px;
- min-height: 16.4286px;
-}
-.modal-content h4 {
- font-family: sans-serif;
- font-size: 16pt;
- color: #899ab8;
- padding: 5px;
-}
-.modal-body {
- background-color: #384152;
- position: relative;
- padding: 15px;
-}
-.modal-footer {
- padding: 8px;
- text-align: right;
- background-color: #384152;
- border-top: none;
-}
-.alert-info {
- background-color: #4a5467;
- border-color: rgba(80,92,133,.22);
- color: #899ab8;
-}
-.modal-header .close {
- margin-top: -5px;
- font-size: 25pt;
-}
-.modal-backdrop,
-.modal-backdrop.in {
- opacity: 0.85;
- background-color: notebook-bg;
-}
-div.panel,
-div.panel-default,
-.panel,
-.panel-default {
- font-family: sans-serif;
- font-size: 10pt;
- background-color: #384152;
- color: #899ab8;
- margin-bottom: 14px;
- border: 0;
- box-shadow: none;
-}
-div.panel > .panel-heading,
-div.panel-default > .panel-heading {
- font-size: 14pt;
- color: #899ab8;
- background: #2e3642;
- background-color: #2e3642;
- border: 0;
-}
-.modal .modal-dialog {
- min-width: 950px;
- margin: 50px auto;
-}
-div.container-fluid {
- margin-right: auto;
- margin-left: auto;
- padding-left: 0px;
- padding-right: 5px;
-}
-div.form-control,
-.form-control {
- font-family: sans-serif;
- font-size: initial;
- color: #899ab8;
- background-color: #262c36;
- border: 1px solid #262c36 !important;
- margin-left: 2px;
- box-shadow: none;
- transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-}
-.form-control-static {
- min-height: inherit;
- height: inherit;
-}
-.form-group.list-group-item {
- color: #899ab8;
- background-color: #384152;
- border-color: rgba(80,92,133,.22);
- margin-bottom: 0px;
-}
-.form-group .input-group {
- float: left;
-}
-input,
-button,
-select,
-textarea {
- background-color: #262c36;
- font-weight: normal;
- border: 1px solid rgba(80,92,133,.22);
-}
-select.form-control.select-xs {
- height: 33px;
- font-size: 10pt;
-}
-.toolbar select,
-.toolbar label {
- width: auto;
- vertical-align: middle;
- margin-right: 0px;
- margin-bottom: 0px;
- display: inline;
- font-size: 92%;
- margin-left: 10px;
- padding: 0px;
- background: #303542 !important;
- background-color: #303542 !important;
- border: 2px solid #303542 !important;
-}
-.form-control:focus {
- border-color: #7aa05d;
- outline: 2px solid rgba(53,114,198,.75);
- -webkit-box-shadow: none;
-}
-::-webkit-input-placeholder {
- color: #526488;
-}
-::-moz-placeholder {
- color: #526488;
-}
-:-ms-input-placeholder {
- color: #526488;
-}
-:-moz-placeholder {
- color: #526488;
-}
-[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
- border: 2px solid rgba(80,92,133,.22) !important;
-}
-[dir="ltr"] #find-and-replace .input-group-btn + .form-control:focus {
- border-color: #7aa05d;
- outline: 2px solid rgba(53,114,198,.75);
- -webkit-box-shadow: none;
- box-shadow: none;
-}
-div.output.output_scroll {
- box-shadow: none;
-}
-::-webkit-scrollbar {
- width: 11px;
- max-height: 9px;
- background-color: #292d3a;
- border-radius: 3px;
- border: none;
-}
-::-webkit-scrollbar-track {
- background: #292d3a;
- border: none;
- width: 11px;
- max-height: 9px;
-}
-::-webkit-scrollbar-thumb {
- border-radius: 2px;
- border: none;
- background: #3f4555;
- background-clip: content-box;
- width: 11px;
-}
-HTML,
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-p,
-blockquote,
-th,
-td,
-span,
-a {
- text-rendering: geometricPrecision;
- -webkit-font-smoothing: subpixel-antialiased;
- font-weight: 400;
-}
-div.input_area {
- background-color: #2c303c;
- background: #2c303c;
- padding-right: 1.2em;
- border: 0px;
- border-radius: 0px;
- border-top-right-radius: 4px;
- border-bottom-right-radius: 4px;
-}
-div.cell {
- padding: 0px;
- background: #2c303c;
- background-color: #2c303c;
- border: medium solid #1d1e23;
- border-radius: 4px;
- top: 0;
-}
-div.cell.selected {
- background: #2c303c;
- background-color: #2c303c;
- border: medium solid #1d1e23;
- padding: 0px;
- border-radius: 5px;
-}
-.edit_mode div.cell.selected {
- padding: 0px;
- background: #2c303c;
- background-color: #2c303c;
- border: medium solid #1d1e23;
- border-radius: 5px;
-}
-div.cell.edit_mode {
- padding: 0px;
- background: #2c303c;
- background-color: #2c303c;
-}
-div.CodeMirror-sizer {
- margin-left: 0px;
- margin-bottom: -21px;
- border-right-width: 16px;
- min-height: 37px;
- padding-right: 0px;
- padding-bottom: 0px;
- margin-top: 0px;
-}
-div.cell.selected:before,
-.edit_mode div.cell.selected:before,
-div.cell.selected:before,
-div.cell.selected.jupyter-soft-selected:before {
- background: #2c303c !important;
- border: none;
- border-radius: 3px;
- position: absolute;
- display: block;
- top: 0px;
- left: 0px;
- width: 0px;
- height: 100%;
-}
-div.cell.text_cell.selected::before,
-.edit_mode div.cell.text_cell.selected:before,
-div.cell.text_cell.selected:before,
-div.cell.text_cell.selected.jupyter-soft-selected:before {
- background: #2c303c !important;
- background-color: #2c303c !important;
- border-color: #48536f !important;
-}
-div.cell.code_cell .input {
- border-left: 5px solid #2c303c !important;
- border-radius: 3px;
- border-bottom-left-radius: 3px;
- border-top-left-radius: 3px;
-}
-div.cell.code_cell.selected .input {
- border-left: 5px solid #2769c3 !important;
- border-radius: 3px;
-}
-.edit_mode div.cell.code_cell.selected .input {
- border-left: 5px solid #33517c !important;
- border-radius: 3px;
-}
-.edit_mode div.cell.selected:before {
- height: 100%;
- border-left: 5px solid #33517c !important;
- border-radius: 3px;
-}
-div.cell.jupyter-soft-selected,
-div.cell.selected.jupyter-soft-selected {
- border-left-color: #33517c !important;
- border-left-width: 0px !important;
- padding-left: 7px !important;
- border-right-color: #33517c !important;
- border-right-width: 0px !important;
- background: #33517c !important;
- border-radius: 6px !important;
-}
-div.cell.selected.jupyter-soft-selected .input {
- border-left: 5px solid #2c303c !important;
-}
-div.cell.selected.jupyter-soft-selected {
- border-left-color: #2769c3;
- border-color: #1d1e23;
- padding-left: 7px;
- border-radius: 6px;
-}
-div.cell.code_cell.selected .input {
- border-left: none;
- border-radius: 3px;
-}
-div.cell.selected.jupyter-soft-selected .prompt,
-div.cell.text_cell.selected.jupyter-soft-selected .prompt {
- top: 0;
- border-left: #2c303c !important;
- border-radius: 2px;
-}
-div.cell.text_cell.selected.jupyter-soft-selected .input_prompt {
- border-left: none !important;
-}
-div.cell.text_cell.jupyter-soft-selected,
-div.cell.text_cell.selected.jupyter-soft-selected {
- border-left-color: #48536f !important;
- border-left-width: 0px !important;
- padding-left: 26px !important;
- border-right-color: #48536f !important;
- border-right-width: 0px !important;
- background: #48536f !important;
- border-radius: 5px !important;
-}
-div.cell.jupyter-soft-selected .input,
-div.cell.selected.jupyter-soft-selected .input {
- border-left-color: #33517c !important;
-}
-div.prompt,
-.prompt {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 9pt !important;
- font-weight: normal;
- color: #526488;
- line-height: 170%;
- padding: 0px;
- padding-top: 4px;
- padding-left: 0px;
- padding-right: 1px;
- text-align: right !important;
- min-width: 11.5ex !important;
- width: 11.5ex !important;
-}
-div.prompt.input_prompt {
- font-size: 9pt !important;
- background-color: #2c303c;
- border-top: 0px;
- border-top-right-radius: 0px;
- border-bottom-left-radius: 0px;
- border-bottom-right-radius: 0px;
- padding-right: 3px;
- min-width: 11.5ex;
- width: 11.5ex !important;
-}
-div.cell.code_cell .input_prompt {
- border-right: 2px solid rgba(53,114,198,.75);
-}
-div.cell.selected .prompt {
- top: 0;
-}
-.edit_mode div.cell.selected .prompt {
- top: 0;
-}
-.edit_mode div.cell.selected .prompt {
- top: 0;
-}
-.run_this_cell {
- visibility: hidden;
- color: transparent;
- padding-top: 0px;
- padding-bottom: 0px;
- padding-left: 3px;
- padding-right: 12px;
- width: 1.5ex;
- width: 0ex;
- background: transparent;
- background-color: transparent;
-}
-div.code_cell:hover div.input .run_this_cell {
- visibility: visible;
-}
-div.cell.code_cell.rendered.selected .run_this_cell:hover {
- background-color: #232730;
- background: #232730;
- color: #2769c3 !important;
-}
-div.cell.code_cell.rendered.unselected .run_this_cell:hover {
- background-color: #232730;
- background: #232730;
- color: #2769c3 !important;
-}
-i.fa-step-forward.fa {
- display: inline-block;
- font: normal normal normal 9px "FontAwesome";
-}
-.fa-step-forward:before {
- content: "\f04b";
-}
-div.cell.selected.jupyter-soft-selected .run_this_cell,
-div.cell.selected.jupyter-soft-selected .run_this_cell:hover,
-div.cell.unselected.jupyter-soft-selected .run_this_cell:hover,
-div.cell.code_cell.rendered.selected.jupyter-soft-selected .run_this_cell:hover,
-div.cell.code_cell.rendered.unselected.jupyter-soft-selected .run_this_cell:hover {
- background-color: #33517c !important;
- background: #33517c !important;
- color: #33517c !important;
-}
-div.output_wrapper {
- background-color: #373e4b;
- border: 0px;
- left: 0px;
- margin-bottom: 0em;
- margin-top: 0em;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
-}
-div.output_subarea.output_text.output_stream.output_stdout,
-div.output_subarea.output_text {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- line-height: 150% !important;
- background-color: #373e4b;
- color: #b1bed6;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
- margin-left: 11.5px;
-}
-div.output_area pre {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- line-height: 151% !important;
- color: #b1bed6;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
-}
-div.output_area {
- display: -webkit-box;
-}
-div.output_html {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- color: #dbdfef;
- background-color: #373e4b;
- background: #373e4b;
-}
-div.output_subarea {
- overflow-x: auto;
- padding: 1.2em !important;
- -webkit-box-flex: 1;
- -moz-box-flex: 1;
- box-flex: 1;
- flex: 1;
-}
-div.btn.btn-default.output_collapsed {
- background: #242a33;
- background-color: #242a33;
- border-color: #242a33;
-}
-div.btn.btn-default.output_collapsed:hover {
- background: #1f252d;
- background-color: #1f252d;
- border-color: #1f252d;
-}
-div.prompt.output_prompt {
- font-family: "Roboto Mono", monospace, monospace;
- font-weight: bold !important;
- background-color: #373e4b;
- color: transparent;
- border-bottom-left-radius: 4px;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
- border-bottom-right-radius: 0px;
- min-width: 11.5ex !important;
- width: 11.5ex !important;
- border-right: 2px solid transparent;
-}
-div.out_prompt_overlay.prompt {
- font-family: "Roboto Mono", monospace, monospace;
- font-weight: bold !important;
- background-color: #373e4b;
- border-bottom-left-radius: 2px;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
- border-bottom-right-radius: 0px;
- min-width: 11.5ex !important;
- width: 11.5ex !important;
- border-right: 2px solid transparent;
- color: transparent;
-}
-div.out_prompt_overlay.prompt:hover {
- background-color: #3e4458;
- box-shadow: none !important;
- border: none;
- border-bottom-left-radius: 2px;
- -webkit-border-: 2px;
- -moz-border-radius: 2px;
- border-top-right-radius: 0px;
- border-top-left-radius: 0px;
- min-width: 11.5ex !important;
- width: 11.5ex !important;
- border-right: 2px solid #3e4458 !important;
-}
-div.cell.code_cell .output_prompt {
- border-right: 2px solid transparent;
- color: transparent;
-}
-div.cell.selected .output_prompt,
-div.cell.selected .out_prompt_overlay.prompt {
- border-left: 5px solid #48536f;
- border-right: 2px solid #373e4b;
- border-radius: 0px !important;
-}
-.edit_mode div.cell.selected .output_prompt,
-.edit_mode div.cell.selected .out_prompt_overlay.prompt {
- border-left: 5px solid #48536f;
- border-right: 2px solid #373e4b;
- border-radius: 0px !important;
-}
-div.text_cell,
-div.text_cell_render pre,
-div.text_cell_render {
- font-family: sans-serif;
- font-size: 16pt;
- line-height: 130% !important;
- color: #abb7ce;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-div .text_cell_render {
- padding: 0.4em 0.4em 0.4em 0.4em;
-}
-div.cell.text_cell .CodeMirror-lines {
- padding-top: .7em !important;
- padding-bottom: .4em !important;
- padding-left: .5em !important;
- padding-right: .5em !important;
- margin-top: .4em;
- margin-bottom: .3em;
-}
-div.cell.text_cell.unrendered div.input_area,
-div.cell.text_cell.rendered div.input_area {
- background-color: #2c303c;
- background: #2c303c;
- border: 0px;
- border-radius: 2px;
-}
-div.cell.text_cell .CodeMirror,
-div.cell.text_cell .CodeMirror pre {
- line-height: 170% !important;
-}
-div.cell.text_cell.rendered.selected {
- font-family: sans-serif;
- line-height: 170% !important;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-div.cell.text_cell.unrendered.selected {
- font-family: sans-serif;
- line-height: 170% !important;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-div.cell.text_cell.selected {
- font-family: sans-serif;
- line-height: 170% !important;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-.edit_mode div.cell.text_cell.selected {
- font-family: sans-serif;
- line-height: 170% !important;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-div.text_cell.unrendered,
-div.text_cell.unrendered.selected,
-div.edit_mode div.text_cell.unrendered {
- font-family: sans-serif;
- line-height: 170% !important;
- background: #2c303c;
- background-color: #2c303c;
- border-radius: 0px;
-}
-div.cell.text_cell .prompt {
- border-right: 0;
- min-width: 11.5ex !important;
- width: 11.5ex !important;
-}
-div.cell.text_cell.rendered .prompt {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 9.5pt !important;
- font-weight: normal;
- color: #526488 !important;
- text-align: right !important;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
- background-color: #2c303c;
- border-right: 2px solid rgba(148,204,114,.3);
- border-left: 4px solid #2c303c;
-}
-div.cell.text_cell.unrendered .prompt {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 9.5pt !important;
- font-weight: normal;
- color: #526488 !important;
- text-align: right !important;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
- border-right: 2px solid rgba(148,204,114,.3);
- border-left: 4px solid #2c303c;
- background-color: #2c303c;
-}
-div.cell.text_cell.rendered .prompt {
- border-right: 2px solid rgba(148,204,114,.3);
-}
-div.cell.text_cell.rendered.selected .prompt {
- top: 0;
- border-left: 4px solid #48536f;
- border-right: 2px solid rgba(148,204,114,.3);
-}
-div.text_cell.unrendered.selected .prompt,
-div.text_cell.rendered.selected .prompt {
- top: 0;
- background: #2c303c;
- border-left: 4px solid #48536f;
- border-right: 2px solid rgba(148,204,114,.3);
-}
-div.rendered_html code {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- padding-top: 3px;
- padding-left: 2px;
- color: #b5c2d9;
- background: #262c36;
- background-color: #262c36;
-}
-pre,
-code,
-kbd,
-samp {
- white-space: pre-wrap;
-}
-.well code,
-code {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- line-height: 170% !important;
- color: #abb7ce;
- background: #262c36;
- background-color: #262c36;
- border-color: #262c36;
-}
-kbd {
- padding: 1px;
- font-size: 16pt;
- font-weight: 800;
- color: #b5c2d9;
- background-color: transparent !important;
- border: 0;
- box-shadow: none;
-}
-pre {
- display: block;
- padding: 8.5px;
- margin: 0 0 9px;
- font-size: 9.0pt;
- line-height: 1.42857143;
- color: #b5c2d9;
- background-color: #262c36;
- border: 1px solid #262c36;
- border-radius: 2px;
-}
-div.rendered_html {
- color: #abb7ce;
-}
-.rendered_html * + ul {
- margin-top: .4em;
- margin-bottom: .3em;
-}
-.rendered_html * + p {
- margin-top: .5em;
- margin-bottom: .5em;
-}
-div.rendered_html pre {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- line-height: 170% !important;
- color: #abb7ce !important;
- background: #262c36;
- background-color: #262c36;
- max-width: 80%;
- border-radius: 0px;
- border-left: 3px solid #262c36;
- max-width: 80%;
- border-radius: 0px;
- padding-left: 5px;
- margin-left: 6px;
-}
-div.text_cell_render pre,
-div.text_cell_render code {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- line-height: 170% !important;
- color: #abb7ce;
- background: #1d1e23;
- background-color: #1d1e23;
- max-width: 80%;
- border-radius: 0px;
- border-left: none;
-}
-div.text_cell_render pre {
- border-left: 3px solid rgba(53,114,198,.75) !important;
- max-width: 80%;
- border-radius: 0px;
- padding-left: 5px;
- margin-left: 6px;
-}
-div.text_cell_render h1,
-div.rendered_html h1,
-div.text_cell_render h2,
-div.rendered_html h2,
-div.text_cell_render h3,
-div.rendered_html h3,
-div.text_cell_render h4,
-div.rendered_html h4,
-div.text_cell_render h5,
-div.rendered_html h5 {
- font-family: sans-serif;
- margin: 0.4em .2em .3em .2em !important;
-}
-.rendered_html h1:first-child,
-.rendered_html h2:first-child,
-.rendered_html h3:first-child,
-.rendered_html h4:first-child,
-.rendered_html h5:first-child,
-.rendered_html h6:first-child {
- margin-top: 0.2em !important;
- margin-bottom: 0.2em !important;
-}
-.rendered_html h1,
-.text_cell_render h1 {
- color: #7aa05d !important;
- font-size: 200%;
- text-align: left;
- font-style: normal;
- font-weight: normal;
-}
-.rendered_html h2,
-.text_cell_render h2 {
- color: #7aa05d !important;
- font-size: 170%;
- font-style: normal;
- font-weight: normal;
-}
-.rendered_html h3,
-.text_cell_render h3 {
- color: #7aa05d !important;
- font-size: 140%;
- font-style: normal;
- font-weight: normal;
-}
-.rendered_html h4,
-.text_cell_render h4 {
- color: #7aa05d !important;
- font-size: 110%;
- font-style: normal;
- font-weight: normal;
-}
-.rendered_html h5,
-.text_cell_render h5 {
- color: #7aa05d !important;
- font-size: 100%;
- font-style: normal;
- font-weight: normal;
-}
-hr {
- margin-top: 8px;
- margin-bottom: 10px;
- border: 0;
- border-top: 1px solid #7aa05d;
-}
-.rendered_html hr {
- color: #7aa05d;
- background-color: #7aa05d;
- margin-right: 2em;
-}
-#complete > select > option:hover {
- background: #313643;
- background-color: #313643;
-}
-div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
- position: absolute;
- z-index: 9999999999;
- top: 0px;
- left: 0px;
- box-shadow: none;
- pointer-events: none;
- border-radius: 2px;
-}
-.rendered_html tr,
-.rendered_html th,
-.rendered_html td {
- text-align: left;
- vertical-align: middle;
- padding: 0.42em 0.47em;
- line-height: normal;
- white-space: normal;
- max-width: none;
- border: none;
-}
-.rendered_html td {
- font-family: sans-serif !important;
- font-size: 9.3pt;
-}
-.rendered_html table {
- font-family: sans-serif !important;
- margin-left: 8px;
- margin-right: auto;
- border: none;
- border-collapse: collapse;
- border-spacing: 0;
- color: #dbdfef;
- table-layout: fixed;
-}
-.rendered_html thead {
- font-family: sans-serif !important;
- font-size: 10.3pt !important;
- background: #2e3642;
- color: #d4d8ec;
- border-bottom: 1px solid #2e3642;
- vertical-align: bottom;
-}
-.rendered_html tbody tr:nth-child(odd) {
- background: #414b5e;
-}
-.rendered_html tbody tr {
- background: #3b4455;
-}
-.rendered_html tbody tr:hover:nth-child(odd) {
- background: #3f495b;
-}
-.rendered_html tbody tr:hover {
- background: #394152;
-}
-.rendered_html * + table {
- margin-top: .05em;
-}
-div.widget-area {
- background-color: #373e4b;
- background: #373e4b;
- color: #b1bed6;
-}
-div.widget-area a {
- font-family: sans-serif;
- font-size: 9.0pt;
- font-weight: normal;
- font-style: normal;
- color: #899ab8;
- text-shadow: none !important;
-}
-div.widget-area a:hover,
-div.widget-area a:focus {
- font-family: sans-serif;
- font-size: 9.0pt;
- font-weight: normal;
- font-style: normal;
- color: #bbc2e0;
- background: rgba(80,92,133,.22);
- background-color: rgba(80,92,133,.22);
- border-color: transparent;
- background-image: none;
- text-shadow: none !important;
-}
-div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn,
-div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn:hover {
- background: #2c343f;
- background-color: #2c343f;
- border: 2px solid #2c343f !important;
- font-size: inherit;
- z-index: 0;
-}
-div.jupyter-widgets.widget-hprogress.widget-hbox {
- display: inline-table !important;
- width: 38% !important;
- margin-left: 10px;
-}
-div.jupyter-widgets.widget-hprogress.widget-hbox .widget-label,
-div.widget-hbox .widget-label,
-.widget-hbox .widget-label,
-.widget-inline-hbox .widget-label,
-div.widget-label {
- text-align: -webkit-auto !important;
- margin-left: 15px !important;
- max-width: 240px !important;
- min-width: 100px !important;
- vertical-align: text-top !important;
- color: #b1bed6 !important;
- font-size: 14px !important;
-}
-.widget-hprogress .progress {
- flex-grow: 1;
- height: 20px;
- margin-top: auto;
- margin-left: 12px;
- margin-bottom: auto;
- width: 300px;
-}
-.progress {
- overflow: hidden;
- height: 22px;
- margin-bottom: 10px;
- padding-left: 10px;
- background-color: #546379 !important;
- border-radius: 2px;
- -webkit-box-shadow: none;
- box-shadow: none;
- z-index: 10;
-}
-.progress-bar-danger {
- background-color: #e16256 !important;
-}
-.progress-bar-info {
- background-color: #3498db !important;
-}
-.progress-bar-warning {
- background-color: #ff914d !important;
-}
-.progress-bar-success {
- background-color: #83a83b !important;
-}
-.widget-select select {
- margin-left: 12px;
-}
-.rendered_html :link {
- font-family: sans-serif;
- font-size: 100%;
- color: #7aa05d;
- text-decoration: underline;
-}
-.rendered_html :visited,
-.rendered_html :visited:active,
-.rendered_html :visited:focus {
- color: #85a26f;
-}
-.rendered_html :visited:hover,
-.rendered_html :link:hover {
- font-family: sans-serif;
- font-size: 100%;
- color: #64963e;
-}
-div.cell.text_cell a.anchor-link:link {
- font-size: inherit;
- text-decoration: none;
- padding: 0px 20px;
- visibility: none;
- color: rgba(0,0,0,.32);
-}
-div.cell.text_cell a.anchor-link:link:hover {
- font-size: inherit;
- color: #94c273;
-}
-.navbar-text {
- margin-top: 4px;
- margin-bottom: 0px;
-}
-#clusters > a {
- color: #94c273;
- text-decoration: underline;
- cursor: auto;
-}
-#clusters > a:hover {
- color: #4c8be2;
- text-decoration: underline;
- cursor: auto;
-}
-#nbextensions-configurator-container > div.row.container-fluid.nbext-selector > h3 {
- font-size: 17px;
- margin-top: 5px;
- margin-bottom: 8px;
- height: 24px;
- padding: 4px 0 4px 0;
-}
-div#nbextensions-configurator-container.container,
-#nbextensions-configurator-container.container {
- width: 100%;
- margin-right: auto;
- margin-left: auto;
-}
-div.nbext-selector > nav > .nav > li > a {
- font-family: sans-serif;
- font-size: 10.5pt;
- padding: 2px 5px;
-}
-div.nbext-selector > nav > .nav > li > a:hover {
- background: transparent;
-}
-div.nbext-selector > nav > .nav > li:hover {
- background-color: rgba(80,92,133,.22) !important;
- background: rgba(80,92,133,.22) !important;
-}
-div.nbext-selector > nav > .nav > li.active:hover {
- background: transparent !important;
- background-color: transparent !important;
-}
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:active,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
- color: #d8dcee;
- background-color: rgba(80,92,133,.22) !important;
- background: rgba(80,92,133,.22) !important;
- -webkit-backface-visibility: hidden;
- -webkit-font-smoothing: subpixel-antialiased !important;
-}
-div.nbext-readme > .nbext-readme-contents > .rendered_html {
- font-family: sans-serif;
- font-size: 11.5pt;
- line-height: 145%;
- padding: 1em 1em;
- color: #abb7ce;
- background-color: #2c303c;
- -webkit-box-shadow: none;
- -moz-box-shadow: none;
- box-shadow: none;
-}
-.nbext-icon,
-.nbext-desc,
-.nbext-compat-div,
-.nbext-enable-btns,
-.nbext-params {
- margin-bottom: 8px;
- font-size: 11.5pt;
-}
-div.nbext-readme > .nbext-readme-contents {
- padding: 0;
- overflow-y: hidden;
-}
-div.nbext-readme > .nbext-readme-contents:not(:empty) {
- margin-top: 0.5em;
- margin-bottom: 2em;
- border: none;
- border-top-color: rgba(148,204,114,.4);
-}
-.nbext-showhide-incompat {
- padding-bottom: 0.5em;
- color: #687b96;
- font-size: 10.5pt;
-}
-.nbext-filter-menu.dropdown-menu > li > a:hover,
-.nbext-filter-menu.dropdown-menu > li > a:focus,
-.nbext-filter-menu.dropdown-menu > li > a.ui-state-focus {
- color: #bbc2e0 !important;
- background-color: #313643 !important;
- background: #313643 !important;
- border-color: #313643 !important;
-}
-.nbext-filter-input-wrap > .nbext-filter-input-subwrap,
-.nbext-filter-input-wrap > .nbext-filter-input-subwrap > input {
- border: none;
- outline: none;
- background-color: transparent;
- padding: 0;
- vertical-align: middle;
- margin-top: -2px;
-}
-span.rendered_html code {
- background-color: transparent;
- color: #899ab8;
-}
-#nbextensions-configurator-container > div.row.container-fluid.nbext-selector {
- padding-left: 0px;
- padding-right: 0px;
-}
-.nbext-filter-menu {
- max-height: 55vh !important;
- overflow-y: auto;
- outline: none;
- border: none;
-}
-.nbext-filter-menu:hover {
- border: none;
-}
-.alert-warning {
- background-color: #384152;
- border-color: #384152;
- color: #899ab8;
-}
-.notification_widget.danger {
- color: #ffffff;
- background-color: #e16256;
- border-color: #e16256;
- padding-right: 5px;
-}
-#nbextensions-configurator-container > div.nbext-buttons.tree-buttons.no-padding.pull-right > span > button {
- border: none !important;
-}
-button#refresh_running_list {
- border: none !important;
-}
-mark,
-.mark {
- background-color: #2c303c;
- color: #abb7ce;
- padding: .15em;
-}
-a.text-warning,
-a.text-warning:hover {
- color: #526488;
-}
-a.text-warning.bg-warning {
- background-color: #1d1e23;
-}
-span.bg-success.text-success {
- background-color: transparent;
- color: #94c273;
-}
-span.bg-danger.text-danger {
- background-color: #1d1e23;
- color: #dc6972;
-}
-.has-success .input-group-addon {
- color: #94c273;
- border-color: transparent;
- background: inherit;
- background-color: rgba(83,180,115,.10);
-}
-.has-success .form-control {
- border-color: #94c273;
- -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
- box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
-}
-.has-error .input-group-addon {
- color: #dc6972;
- border-color: transparent;
- background: inherit;
- background-color: rgba(192,57,67,.10);
-}
-.has-error .form-control {
- border-color: #dc6972;
- -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
- box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
-}
-.kse-input-group-pretty > kbd {
- font-family: "Roboto Mono", monospace, monospace;
- color: #899ab8;
- font-weight: normal;
- background: transparent;
-}
-.kse-input-group-pretty > kbd {
- font-family: "Roboto Mono", monospace, monospace;
- color: #899ab8;
- font-weight: normal;
- background: transparent;
-}
-div.nbext-enable-btns .btn[disabled],
-div.nbext-enable-btns .btn[disabled]:hover,
-.btn-default.disabled,
-.btn-default[disabled] {
- background: #2e333f;
- background-color: #2e333f;
- color: #7f92b2;
-}
-label#Keyword-Filter {
- display: none;
-}
-.input-group .nbext-list-btn-add,
-.input-group-btn:last-child > .btn-group > .btn {
- background: #2e3642;
- background-color: #2e3642;
- border-color: #2e3642;
- border: 2px solid #2e3642;
-}
-.input-group .nbext-list-btn-add:hover,
-.input-group-btn:last-child > .btn-group > .btn:hover {
- background: #2a313c;
- background-color: #2a313c;
- border-color: #2a313c;
- border: 2px solid #2a313c;
-}
-#notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn {
- background: #2e3642;
- background-color: #2e3642;
- border-color: #2e3642;
-}
-#notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn:hover {
- background: #2a313c;
- background-color: #2a313c;
- border-color: #2a313c;
-}
-.ui-widget-content {
- background: #303542;
- background-color: #303542;
- border: 2px solid #303542;
- color: #899ab8;
-}
-div.collapsible_headings_toggle {
- color: rgba(80,92,133,.45) !important;
-}
-div.collapsible_headings_toggle:hover {
- color: #7aa05d !important;
-}
-.collapsible_headings_toggle .h1,
-.collapsible_headings_toggle .h2,
-.collapsible_headings_toggle .h3,
-.collapsible_headings_toggle .h4,
-.collapsible_headings_toggle .h5,
-.collapsible_headings_toggle .h6 {
- margin: 0.3em .4em 0em 0em !important;
- line-height: 1.2 !important;
-}
-div.collapsible_headings_toggle .fa-caret-down:before,
-div.collapsible_headings_toggle .fa-caret-right:before {
- font-size: xx-large;
- transition: transform 1000ms;
- transform: none !important;
-}
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h1:after,
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h2:after,
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h3:after,
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h4:after,
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h5:after,
-.collapsible_headings_collapsed.collapsible_headings_ellipsis .rendered_html h6:after {
- position: absolute;
- right: 0;
- bottom: 20% !important;
- content: "[\002026]";
- color: rgba(80,92,133,.45) !important;
- padding: 0.5em 0em 0em 0em !important;
-}
-.collapsible_headings_ellipsis .rendered_html h1,
-.collapsible_headings_ellipsis .rendered_html h2,
-.collapsible_headings_ellipsis .rendered_html h3,
-.collapsible_headings_ellipsis .rendered_html h4,
-.collapsible_headings_ellipsis .rendered_html h5,
-.collapsible_headings_ellipsis .rendered_html h6,
-.collapsible_headings_toggle .fa {
- transition: transform 1000ms !important;
- -webkit-transform: inherit !important;
- -moz-transform: inherit !important;
- -ms-transform: inherit !important;
- -o-transform: inherit !important;
- transform: inherit !important;
- padding-right: 0px !important;
-}
-#toc-wrapper {
- z-index: 90;
- position: fixed !important;
- display: flex;
- flex-direction: column;
- overflow: hidden;
- padding: 10px;
- border-style: solid;
- border-width: thin;
- border-right-width: medium !important;
- background-color: #1d1e23 !important;
-}
-#toc-wrapper.ui-draggable.ui-resizable.sidebar-wrapper {
- border-color: rgba(80,92,133,.22) !important;
-}
-#toc a,
-#navigate_menu a,
-.toc {
- color: #899ab8 !important;
- font-size: 16pt !important;
-}
-#toc li > span:hover {
- background-color: #313643 !important;
-}
-#toc a:hover,
-#navigate_menu a:hover,
-.toc {
- color: #d8dcee !important;
- font-size: 16pt !important;
-}
-#toc-wrapper .toc-item-num {
- color: #7aa05d !important;
- font-size: 16pt !important;
-}
-input.raw_input {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt !important;
- color: #b5c2d9;
- background-color: #262c36;
- border-color: #242a33;
- background: #242a33;
- width: auto;
- vertical-align: baseline;
- padding: 0em 0.25em;
- margin: 0em 0.25em;
- -webkit-box-shadow: none;
- box-shadow: none;
-}
-audio,
-video {
- display: inline;
- vertical-align: middle;
- align-content: center;
- margin-left: 20%;
-}
-.cmd-palette .modal-body {
- padding: 0px;
- margin: 0px;
-}
-.cmd-palette form {
- background: #293547;
- background-color: #293547;
-}
-.typeahead-field input:last-child,
-.typeahead-hint {
- background: #293547;
- background-color: #293547;
- z-index: 1;
-}
-.typeahead-field input {
- font-family: sans-serif;
- color: #b5c2d9;
- border: none;
- font-size: 28pt;
- display: inline-block;
- line-height: inherit;
- padding: 3px 10px;
- height: 70px;
-}
-.typeahead-select {
- background-color: #293547;
-}
-body > div.modal.cmd-palette.typeahead-field {
- display: table;
- border-collapse: separate;
- background-color: #2b3850;
-}
-.typeahead-container button {
- font-family: sans-serif;
- font-size: 28pt;
- background-color: #2e3642;
- border: none;
- display: inline-block;
- line-height: inherit;
- padding: 3px 10px;
- height: 70px;
-}
-.typeahead-search-icon {
- min-width: 40px;
- min-height: 55px;
- display: block;
- vertical-align: middle;
- text-align: center;
-}
-.typeahead-container button:focus,
-.typeahead-container button:hover {
- color: #bbc2e0;
- background-color: #2a313c;
- border-color: #2a2e39;
-}
-.typeahead-list > li.typeahead-group.active > a,
-.typeahead-list > li.typeahead-group > a,
-.typeahead-list > li.typeahead-group > a:focus,
-.typeahead-list > li.typeahead-group > a:hover {
- display: none;
-}
-.typeahead-dropdown > li > a,
-.typeahead-list > li > a {
- color: #899ab8;
- text-decoration: none;
-}
-.typeahead-dropdown,
-.typeahead-list {
- font-family: sans-serif;
- font-size: 10pt;
- color: #899ab8;
- background-color: #202937;
- border: none;
- background-clip: padding-box;
- margin-top: 0px;
- padding: 3px 2px 3px 0px;
- line-height: 1.7;
-}
-.typeahead-dropdown > li.active > a,
-.typeahead-dropdown > li > a:focus,
-.typeahead-dropdown > li > a:hover,
-.typeahead-list > li.active > a,
-.typeahead-list > li > a:focus,
-.typeahead-list > li > a:hover {
- color: #bbc2e0;
- background-color: #2b3850;
- border-color: #2b3850;
-}
-.command-shortcut:before {
- content: "(command)";
- padding-right: 3px;
- color: #526488;
-}
-.edit-shortcut:before {
- content: "(edit)";
- padding-right: 3px;
- color: #526488;
-}
-ul.typeahead-list i {
- margin-left: 1px;
- width: 18px;
- margin-right: 10px;
-}
-ul.typeahead-list {
- max-height: 50vh;
- overflow: auto;
-}
-.typeahead-list > li {
- position: relative;
- border: none;
-}
-div.input.typeahead-hint,
-input.typeahead-hint,
-body > div.modal.cmd-palette.in > div > div > div > form > div > div.typeahead-field > span.typeahead-query > input.typeahead-hint {
- color: #526488 !important;
- background-color: transparent;
- padding: 3px 10px;
-}
-.typeahead-dropdown > li > a,
-.typeahead-list > li > a {
- display: block;
- padding: 5px;
- clear: both;
- font-weight: 400;
- line-height: 1.7;
- border: 1px solid #202937;
- border-bottom-color: rgba(80,92,133,.45);
-}
-body > div.modal.cmd-palette.in > div {
- min-width: 750px;
- margin: 150px auto;
-}
-.typeahead-container strong {
- font-weight: bolder;
- color: #7aa05d;
-}
-#find-and-replace #replace-preview .match,
-#find-and-replace #replace-preview .insert {
- color: #ffffff;
- background-color: #2769c3;
- border-color: #2769c3;
- border-style: solid;
- border-width: 1px;
- border-radius: 0px;
-}
-#find-and-replace #replace-preview .replace .match {
- background-color: #dc6972;
- border-color: #dc6972;
- border-radius: 0px;
-}
-#find-and-replace #replace-preview .replace .insert {
- background-color: #94c273;
- border-color: #94c273;
- border-radius: 0px;
-}
-.jupyter-dashboard-menu-item.selected::before {
- font-family: 'FontAwesome' !important;
- content: '\f00c' !important;
- position: absolute !important;
- color: #7aa05d !important;
- left: 0px !important;
- top: 13px !important;
- font-size: 12px !important;
-}
-.shortcut_key,
-span.shortcut_key {
- display: inline-block;
- width: 16ex;
- text-align: right;
- font-family: monospace;
-}
-.jupyter-keybindings {
- padding: 1px;
- line-height: 24px;
- border-bottom: 1px solid rgba(80,92,133,.22);
-}
-.jupyter-keybindings i {
- background: #262c36;
- font-size: small;
- padding: 5px;
- margin-left: 7px;
-}
-div#short-key-bindings-intro.well,
-.well {
- background-color: #2e3642;
- border: 1px solid #2e3642;
- color: #899ab8;
- border-radius: 2px;
- -webkit-box-shadow: none;
- box-shadow: none;
-}
-#texteditor-backdrop {
- background: #1d1e23;
- background-color: #1d1e23;
-}
-#texteditor-backdrop #texteditor-container .CodeMirror-gutter,
-#texteditor-backdrop #texteditor-container .CodeMirror-gutters {
- background: #353a48;
- background-color: #353a48;
- color: #526488;
-}
-.edit_app #menubar .navbar {
- margin-bottom: 0px;
-}
-#texteditor-backdrop #texteditor-container {
- padding: 0px;
- background-color: #2c303c;
- box-shadow: none;
-}
-.terminal-app {
- background: #1d1e23;
-}
-.terminal-app > #header {
- background: #1d1e23;
-}
-.terminal-app .terminal {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- line-height: 170%;
- color: #b5c2d9;
- background: #2c303c;
- padding: 0.4em;
- border-radius: 2px;
- -webkit-box-shadow: none;
- box-shadow: none;
-}
-.terminal .xterm-viewport {
- background-color: #2c303c;
- color: #b5c2d9;
- overflow-y: auto;
-}
-.terminal .xterm-color-0 {
- color: #7aa05d;
-}
-.terminal .xterm-color-1 {
- color: #ea8080;
-}
-.terminal .xterm-color-2 {
- color: #cc89e0;
-}
-.terminal .xterm-color-3 {
- color: #ea8080;
-}
-.terminal .xterm-color-4 {
- color: #fea47f;
-}
-.terminal .xterm-color-5 {
- color: #94c273;
-}
-.terminal .xterm-color-6 {
- color: #61afef;
-}
-.terminal .xterm-color-7 {
- color: #61afef;
-}
-.terminal .xterm-color-8 {
- color: #94c273;
-}
-.terminal .xterm-color-9 {
- color: #94c273;
-}
-.terminal .xterm-color-10 {
- color: #ea8080;
-}
-.terminal .xterm-color-14 {
- color: #61afef;
-}
-.terminal .xterm-bg-color-15 {
- background-color: #2c303c;
-}
-.terminal:not(.xterm-cursor-style-underline):not(.xterm-cursor-style-bar) .terminal-cursor {
- background-color: #7aa05d;
- color: #2c303c;
-}
-.terminal:not(.focus) .terminal-cursor {
- outline: 1px solid #7aa05d;
- outline-offset: -1px;
-}
-.celltoolbar {
- font-size: 100%;
- padding-top: 3px;
- border-color: transparent;
- border-bottom: thin solid rgba(148,204,114,.4);
- background: transparent;
-}
-.cell-tag,
-.tags-input input,
-.tags-input button {
- color: #899ab8;
- background-color: #1d1e23;
- background-image: none;
- border: 1px solid #899ab8;
- border-radius: 1px;
- box-shadow: none;
- width: inherit;
- font-size: inherit;
- height: 22px;
- line-height: 22px;
-}
-#notebook-container > div.cell.code_cell.rendered.selected > div.input > div.inner_cell > div.ctb_hideshow.ctb_show > div > div > button,
-#notebook-container > div.input > div.inner_cell > div.ctb_hideshow.ctb_show > div > div > button {
- font-size: 10pt;
- color: #899ab8;
- background-color: #1d1e23;
- background-image: none;
- border: 1px solid #899ab8;
- border-radius: 1px;
- box-shadow: none;
- width: inherit;
- font-size: inherit;
- height: 22px;
- line-height: 22px;
-}
-div#pager #pager-contents {
- background: #1d1e23 !important;
- background-color: #1d1e23 !important;
-}
-div#pager pre {
- color: #b5c2d9 !important;
- background: #2c303c !important;
- background-color: #2c303c !important;
- padding: 0.4em;
-}
-div#pager .ui-resizable-handle {
- top: 0px;
- height: 8px;
- background: #7aa05d !important;
- border-top: 1px solid #7aa05d;
- border-bottom: 1px solid #7aa05d;
-}
-div.CodeMirror,
-div.CodeMirror pre {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- line-height: 170%;
- color: #b5c2d9;
-}
-div.CodeMirror-lines {
- padding-bottom: .9em;
- padding-left: .5em;
- padding-right: 1.5em;
- padding-top: .7em;
-}
-span.ansiblack,
-.ansi-black-fg {
- color: #2b303b;
-}
-span.ansiblue,
-.ansi-blue-fg,
-.ansi-blue-intense-fg {
- color: #61afef;
-}
-span.ansigray,
-.ansi-gray-fg,
-.ansi-gray-intense-fg {
- color: #899ab8;
-}
-span.ansigreen,
-.ansi-green-fg {
- color: #8fca9a;
-}
-.ansi-green-intense-fg {
- color: #899ab8;
-}
-span.ansipurple,
-.ansi-purple-fg,
-.ansi-purple-intense-fg {
- color: #b399ef;
-}
-span.ansicyan,
-.ansi-cyan-fg,
-.ansi-cyan-intense-fg {
- color: #b399ef;
-}
-span.ansiyellow,
-.ansi-yellow-fg,
-.ansi-yellow-intense-fg {
- color: #ddd7a3;
-}
-span.ansired,
-.ansi-red-fg,
-.ansi-red-intense-fg {
- color: #e07a7a;
-}
-div.output-stderr {
- background-color: #e07a7a;
-}
-div.output-stderr pre {
- color: #d0d4e6;
-}
-div.js-error {
- color: #e07a7a;
-}
-.ipython_tooltip {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- line-height: 170%;
- border: 2px solid #21262c;
- background: #323a44;
- background-color: #323a44;
- border-radius: 2px;
- overflow-x: visible;
- overflow-y: visible;
- box-shadow: none;
- position: absolute;
- z-index: 1000;
-}
-.ipython_tooltip .tooltiptext pre {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- line-height: 170%;
- background: #323a44;
- background-color: #323a44;
- color: #b5c2d9;
- overflow-x: visible;
- overflow-y: visible;
- max-width: 900px;
-}
-div#tooltip.ipython_tooltip {
- overflow-x: wrap;
- overflow-y: visible;
- max-width: 800px;
-}
-div.tooltiptext.bigtooltip {
- overflow-x: visible;
- overflow-y: scroll;
- height: 400px;
- max-width: 800px;
-}
-.cm-s-ipython.CodeMirror {
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- background: #2c303c;
- color: #b5c2d9;
- border-radius: 2px;
- font-style: normal;
- font-weight: normal;
-}
-.cm-s-ipython div.CodeMirror-selected {
- background: #373d4b;
-}
-.CodeMirror-gutters {
- border: none;
- border-right: 1px solid #353a48 !important;
- background-color: #353a48 !important;
- background: #353a48 !important;
- border-radius: 0px;
- white-space: nowrap;
-}
-.cm-s-ipython .CodeMirror-gutters {
- background: #353a48;
- border: none;
- border-radius: 0px;
- width: 36px;
-}
-.cm-s-ipython .CodeMirror-linenumber {
- color: #526488;
-}
-.CodeMirror-sizer {
- margin-left: 40px;
-}
-.CodeMirror-linenumber,
-div.CodeMirror-linenumber,
-.CodeMirror-gutter.CodeMirror-linenumberdiv.CodeMirror-gutter.CodeMirror-linenumber {
- padding-right: 1px;
- margin-left: 0px;
- margin: 0px;
- width: 26px !important;
- padding: 0px;
- text-align: right;
-}
-.CodeMirror-linenumber {
- color: #526488;
-}
-.cm-s-ipython .CodeMirror-cursor {
- border-left: 5px solid #db797c !important;
-}
-.cm-s-ipython span.cm-comment {
- color: #526488;
- font-style: italic;
-}
-.cm-s-ipython span.cm-atom {
- color: #61afef;
-}
-.cm-s-ipython span.cm-number {
- color: #fea47f;
-}
-.cm-s-ipython span.cm-property {
- color: #b5c2d9;
-}
-.cm-s-ipython span.cm-attribute {
- color: #b5c2d9;
-}
-.cm-s-ipython span.cm-keyword {
- color: #cc89e0;
- font-weight: normal;
-}
-.cm-s-ipython span.cm-string {
- color: #94c273;
-}
-.cm-s-ipython span.cm-meta {
- color: #ddd7a3;
-}
-.cm-s-ipython span.cm-operator {
- color: #61afef;
-}
-.cm-s-ipython span.cm-builtin {
- color: #ea8080;
-}
-.cm-s-ipython span.cm-variable {
- color: #b5c2d9;
-}
-.cm-s-ipython span.cm-variable-2 {
- color: #ea8080;
-}
-.cm-s-ipython span.cm-variable-3 {
- color: #cc89e0;
-}
-.cm-s-ipython span.cm-def {
- color: #61afef;
- font-weight: normal;
-}
-.cm-s-ipython span.cm-error {
- background: rgba(192,57,67,.3);
-}
-.cm-s-ipython span.cm-tag {
- color: #61afef;
-}
-.cm-s-ipython span.cm-link {
- color: #94c273;
-}
-.cm-s-ipython span.cm-storage {
- color: #61afef;
-}
-.cm-s-ipython span.cm-entity {
- color: #61afef;
-}
-.cm-s-ipython span.cm-quote {
- color: #94c273;
-}
-div.CodeMirror span.CodeMirror-matchingbracket {
- color: #ffffff;
- font-weight: bold;
- background-color: #4c8be2;
-}
-div.CodeMirror span.CodeMirror-nonmatchingbracket {
- color: #ffffff;
- font-weight: bold;
- background: rgba(192,57,67,.3) !important;
-}
-.cm-header-1 {
- font-size: 215%;
-}
-.cm-header-2 {
- font-size: 180%;
-}
-.cm-header-3 {
- font-size: 150%;
-}
-.cm-header-4 {
- font-size: 120%;
-}
-.cm-header-5 {
- font-size: 100%;
-}
-.cm-s-default .cm-hr {
- color: #61afef;
-}
-div.cell.text_cell .cm-s-default .cm-header {
- font-family: sans-serif;
- font-weight: normal;
- color: #7aa05d !important;
- margin-top: 0.3em !important;
- margin-bottom: 0.3em !important;
-}
-div.cell.text_cell .cm-s-default span.cm-variable-2 {
- color: #abb7ce !important;
-}
-div.cell.text_cell .cm-s-default span.cm-variable-3 {
- color: #cc89e0 !important;
-}
-.cm-s-default span.cm-comment {
- color: #526488 !important;
-}
-.cm-s-default .cm-tag {
- color: #8fb36a;
-}
-.cm-s-default .cm-builtin {
- color: #ea8080;
-}
-.cm-s-default .cm-string {
- color: #94c273;
-}
-.cm-s-default .cm-keyword {
- color: #cc89e0;
-}
-.cm-s-default .cm-number {
- color: #fea47f;
-}
-.cm-s-default .cm-error {
- color: #61afef;
-}
-.cm-s-default .cm-link {
- color: #94c273;
-}
-.cm-s-default .cm-atom {
- color: #fea47f;
-}
-.cm-s-default .cm-def {
- color: #61afef;
-}
-.CodeMirror-cursor {
- border-left: 5px solid #db797c !important;
- border-right: none;
- width: 0;
-}
-.cm-s-default div.CodeMirror-selected {
- background: #373d4b;
-}
-.cm-s-default .cm-selected {
- background: #373d4b;
-}
-.MathJax_Display,
-.MathJax {
- border: 0 !important;
- font-size: 110% !important;
- text-align: center !important;
- margin: 0em !important;
- line-height: 2.25 !important;
-}
-.MathJax:focus,
-body :focus .MathJax {
- display: inline-block !important;
-}
-.MathJax:focus,
-body :focus .MathJax {
- display: inline-block !important;
-}
-.completions {
- position: absolute;
- z-index: 110;
- overflow: hidden;
- border: medium solid rgba(53,114,198,.75);
- box-shadow: none;
- line-height: 1;
-}
-.completions select {
- background: #2c303c;
- background-color: #2c303c;
- outline: none;
- border: none;
- padding: 0px;
- margin: 0px;
- margin-left: 2px;
- overflow: auto;
- font-family: "Roboto Mono", monospace, monospace;
- font-size: 16pt;
- color: #b5c2d9;
- width: auto;
-}
-div#maintoolbar {
- display: none !important;
-}
-#header-container {
- display: none !important;
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
 }
 
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 110,
-                ".MathJax_Display": {
-                    "font-size": "110%",
-                }
-            }
-        }
-    });
-</script>
-    
   </style>
 
 
@@ -17840,7 +14585,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>27.555184</td>
       <td>61.719016</td>
       <td>2.208808</td>
@@ -17848,7 +14593,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>1.358696</td>
       <td>13.079034</td>
       <td>13.312141</td>
@@ -17856,7 +14601,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>73.112876</td>
       <td>62.070220</td>
       <td>1.268206</td>
@@ -17864,7 +14609,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>146.568562</td>
       <td>82.394624</td>
       <td>-0.274902</td>
@@ -17872,7 +14617,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>6.071070</td>
       <td>29.760400</td>
       <td>5.318767</td>
@@ -17880,7 +14625,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>5</td>
+      <th>5</th>
       <td>32.919732</td>
       <td>65.094197</td>
       <td>1.605538</td>
@@ -17888,7 +14633,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>6</td>
+      <th>6</th>
       <td>34.101171</td>
       <td>62.577395</td>
       <td>1.890020</td>
@@ -17896,7 +14641,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>7</td>
+      <th>7</th>
       <td>50.107860</td>
       <td>66.321825</td>
       <td>1.456423</td>
@@ -17904,7 +14649,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>8</td>
+      <th>8</th>
       <td>176.119565</td>
       <td>59.737720</td>
       <td>-1.785377</td>
@@ -17912,7 +14657,7 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
       <td>1</td>
     </tr>
     <tr>
-      <td>9</td>
+      <th>9</th>
       <td>183.622910</td>
       <td>79.932815</td>
       <td>-1.326647</td>
@@ -18011,70 +14756,70 @@ $$ \mathbf{\lambda}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{\lambda} \in \mathbf
   </thead>
   <tbody>
     <tr>
-      <td>233</td>
+      <th>233</th>
       <td>159.849498</td>
       <td>76.740010</td>
       <td>-0.575016</td>
       <td>-0.941293</td>
     </tr>
     <tr>
-      <td>831</td>
+      <th>831</th>
       <td>4.243311</td>
       <td>26.746490</td>
       <td>7.110978</td>
       <td>52.701218</td>
     </tr>
     <tr>
-      <td>2658</td>
+      <th>2658</th>
       <td>1.015050</td>
       <td>10.449662</td>
       <td>15.593479</td>
       <td>316.011541</td>
     </tr>
     <tr>
-      <td>2495</td>
+      <th>2495</th>
       <td>2.235786</td>
       <td>19.071848</td>
       <td>9.659137</td>
       <td>99.294390</td>
     </tr>
     <tr>
-      <td>2603</td>
+      <th>2603</th>
       <td>2.266722</td>
       <td>15.512103</td>
       <td>9.062942</td>
       <td>99.652157</td>
     </tr>
     <tr>
-      <td>111</td>
+      <th>111</th>
       <td>121.404682</td>
       <td>47.965569</td>
       <td>0.663053</td>
       <td>1.203139</td>
     </tr>
     <tr>
-      <td>1370</td>
+      <th>1370</th>
       <td>35.209866</td>
       <td>60.573157</td>
       <td>1.635995</td>
       <td>1.609377</td>
     </tr>
     <tr>
-      <td>1124</td>
+      <th>1124</th>
       <td>199.577759</td>
       <td>58.656643</td>
       <td>-1.862320</td>
       <td>2.391870</td>
     </tr>
     <tr>
-      <td>2170</td>
+      <th>2170</th>
       <td>0.663043</td>
       <td>8.571517</td>
       <td>23.415092</td>
       <td>655.614875</td>
     </tr>
     <tr>
-      <td>2177</td>
+      <th>2177</th>
       <td>3.112876</td>
       <td>16.855717</td>
       <td>8.301954</td>
@@ -18249,12 +14994,12 @@ Name: Class, dtype: int64</pre>
 
 
 
-<div id="d6898bc6-a2a1-41ff-8e4e-30876aaf0674" class="jupyter-widgets jp-OutputArea-output ">
+<div id="0395fd11-e0f5-4e63-9953-ed0c688ac783" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
+var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7c151a6adeac4a2cb7002bbd78590a98", "version_major": 2, "version_minor": 0}
+{"model_id": "f9ed873e496641a3bf4b5bb93644e12b", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -18348,7 +15093,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_GridSearch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
@@ -18364,7 +15109,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_DecisionTree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -18378,7 +15123,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf_DecisionTree</span><span class="p">,</span> 
@@ -18386,7 +15131,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
                           <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
                           <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
                           <span class="n">refit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-                          <span class="n">iid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                         <span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18397,7 +15142,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">);</span>
@@ -18411,7 +15156,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>        
@@ -18425,7 +15170,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grid Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -18461,7 +15206,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span>
@@ -18480,7 +15225,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -18528,164 +15273,164 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
-      <td>0.004332</td>
-      <td>0.000422</td>
-      <td>0.001561</td>
-      <td>0.000247</td>
+      <th>0</th>
+      <td>0.004925</td>
+      <td>0.001046</td>
+      <td>0.002223</td>
+      <td>0.000399</td>
       <td>1</td>
       <td>1</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 1}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.855063</td>
-      <td>0.009268</td>
+      <td>0.855072</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>1</td>
-      <td>0.003547</td>
-      <td>0.000785</td>
-      <td>0.001203</td>
-      <td>0.000333</td>
+      <th>1</th>
+      <td>0.003653</td>
+      <td>0.000179</td>
+      <td>0.001789</td>
+      <td>0.000120</td>
       <td>1</td>
       <td>10</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 10}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.855063</td>
-      <td>0.009268</td>
+      <td>0.855072</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>0.002594</td>
-      <td>0.000124</td>
-      <td>0.001065</td>
-      <td>0.000381</td>
+      <th>2</th>
+      <td>0.005686</td>
+      <td>0.001406</td>
+      <td>0.002249</td>
+      <td>0.000334</td>
       <td>1</td>
       <td>100</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 100}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.855063</td>
-      <td>0.009268</td>
+      <td>0.855072</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>0.008065</td>
-      <td>0.000282</td>
-      <td>0.001008</td>
-      <td>0.000128</td>
+      <th>3</th>
+      <td>0.010776</td>
+      <td>0.001106</td>
+      <td>0.002222</td>
+      <td>0.000257</td>
       <td>10</td>
       <td>1</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 1}</td>
       <td>0.847619</td>
       <td>0.822857</td>
-      <td>0.859048</td>
+      <td>0.858779</td>
       <td>...</td>
-      <td>0.841720</td>
-      <td>0.012099</td>
+      <td>0.841729</td>
+      <td>0.011991</td>
       <td>8</td>
       <td>0.956128</td>
       <td>0.948021</td>
-      <td>0.954220</td>
+      <td>0.954242</td>
       <td>0.962345</td>
-      <td>0.957122</td>
-      <td>0.955567</td>
-      <td>0.004635</td>
+      <td>0.957102</td>
+      <td>0.955568</td>
+      <td>0.004633</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>0.007039</td>
-      <td>0.000053</td>
-      <td>0.000945</td>
-      <td>0.000104</td>
+      <th>4</th>
+      <td>0.007944</td>
+      <td>0.000422</td>
+      <td>0.001771</td>
+      <td>0.000186</td>
       <td>10</td>
       <td>10</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 10}</td>
       <td>0.845714</td>
       <td>0.847619</td>
-      <td>0.853333</td>
+      <td>0.853053</td>
       <td>...</td>
-      <td>0.846291</td>
-      <td>0.008921</td>
+      <td>0.846300</td>
+      <td>0.008757</td>
       <td>6</td>
       <td>0.896042</td>
       <td>0.898903</td>
-      <td>0.898426</td>
+      <td>0.898475</td>
       <td>0.893232</td>
-      <td>0.895665</td>
-      <td>0.896454</td>
-      <td>0.002053</td>
+      <td>0.895615</td>
+      <td>0.896453</td>
+      <td>0.002066</td>
     </tr>
     <tr>
-      <td>5</td>
-      <td>0.005768</td>
-      <td>0.000916</td>
-      <td>0.001100</td>
-      <td>0.000292</td>
+      <th>5</th>
+      <td>0.005493</td>
+      <td>0.001068</td>
+      <td>0.001597</td>
+      <td>0.000138</td>
       <td>10</td>
       <td>100</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 100}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.855063</td>
-      <td>0.009268</td>
+      <td>0.855072</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>0.010575</td>
-      <td>0.000200</td>
-      <td>0.001347</td>
-      <td>0.000302</td>
+      <th>6</th>
+      <td>0.010335</td>
+      <td>0.000349</td>
+      <td>0.002156</td>
+      <td>0.000335</td>
       <td>100</td>
       <td>1</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 1}</td>
       <td>0.826667</td>
       <td>0.796190</td>
-      <td>0.841905</td>
+      <td>0.841603</td>
       <td>...</td>
-      <td>0.824184</td>
-      <td>0.015118</td>
+      <td>0.824190</td>
+      <td>0.015056</td>
       <td>9</td>
       <td>1.000000</td>
       <td>1.000000</td>
@@ -18696,52 +15441,52 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
       <td>0.000000</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>0.008471</td>
-      <td>0.001121</td>
-      <td>0.001232</td>
-      <td>0.000294</td>
+      <th>7</th>
+      <td>0.008219</td>
+      <td>0.000351</td>
+      <td>0.001902</td>
+      <td>0.000194</td>
       <td>100</td>
       <td>10</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 10}</td>
       <td>0.845714</td>
       <td>0.849524</td>
-      <td>0.855238</td>
+      <td>0.854962</td>
       <td>...</td>
-      <td>0.845143</td>
-      <td>0.010045</td>
+      <td>0.845154</td>
+      <td>0.009863</td>
       <td>7</td>
       <td>0.896996</td>
       <td>0.899857</td>
-      <td>0.898426</td>
+      <td>0.898475</td>
       <td>0.894185</td>
-      <td>0.896617</td>
+      <td>0.896568</td>
       <td>0.897216</td>
-      <td>0.001899</td>
+      <td>0.001909</td>
     </tr>
     <tr>
-      <td>8</td>
-      <td>0.005268</td>
-      <td>0.000464</td>
-      <td>0.000953</td>
-      <td>0.000112</td>
+      <th>8</th>
+      <td>0.005478</td>
+      <td>0.000339</td>
+      <td>0.001637</td>
+      <td>0.000150</td>
       <td>100</td>
       <td>100</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 100}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.855063</td>
-      <td>0.009268</td>
+      <td>0.855072</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
   </tbody>
 </table>
@@ -18758,7 +15503,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_GridSearch</span> <span class="o">=</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -18772,7 +15517,7 @@ var element = document.getElementById('d6898bc6-a2a1-41ff-8e4e-30876aaf0674');
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_GridSearch</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_GridSearch</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -18857,7 +15602,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># specify parameters and distributions to sample from</span>
@@ -18873,7 +15618,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run randomized search</span>
@@ -18882,9 +15627,9 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
                                   <span class="n">param_distributions</span><span class="o">=</span><span class="n">parameters_RandomSearch</span><span class="p">,</span> 
                                   <span class="n">n_iter</span><span class="o">=</span><span class="n">n_iter_search</span><span class="p">,</span> 
                                   <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-                                  <span class="n">iid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
                                   <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                  <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+                                  <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+                                 <span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18895,7 +15640,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fit the random search instance</span>
@@ -18910,7 +15655,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">RandomSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>                 
@@ -18946,7 +15691,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -18965,7 +15710,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
 
 
@@ -19013,220 +15758,220 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
-      <td>0.006203</td>
-      <td>0.000478</td>
-      <td>0.001421</td>
-      <td>0.000288</td>
+      <th>0</th>
+      <td>0.007620</td>
+      <td>0.000491</td>
+      <td>0.002112</td>
+      <td>0.000128</td>
       <td>23</td>
       <td>72</td>
       <td>{'max_depth': 23, 'min_samples_leaf': 72}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.854310</td>
-      <td>0.010586</td>
-      <td>6</td>
+      <td>0.854308</td>
+      <td>0.010440</td>
+      <td>7</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>1</td>
-      <td>0.006415</td>
-      <td>0.000592</td>
-      <td>0.001459</td>
-      <td>0.000212</td>
+      <th>1</th>
+      <td>0.006599</td>
+      <td>0.000702</td>
+      <td>0.002401</td>
+      <td>0.001041</td>
       <td>26</td>
       <td>83</td>
       <td>{'max_depth': 26, 'min_samples_leaf': 83}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
       <td>0.855072</td>
-      <td>0.009263</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>0.009613</td>
-      <td>0.000646</td>
-      <td>0.001480</td>
-      <td>0.000210</td>
+      <th>2</th>
+      <td>0.010909</td>
+      <td>0.001371</td>
+      <td>0.003310</td>
+      <td>0.000847</td>
       <td>17</td>
       <td>24</td>
       <td>{'max_depth': 17, 'min_samples_leaf': 24}</td>
       <td>0.847619</td>
       <td>0.860952</td>
-      <td>0.868571</td>
+      <td>0.868321</td>
       <td>...</td>
       <td>0.854310</td>
-      <td>0.012320</td>
+      <td>0.012162</td>
       <td>6</td>
       <td>0.875536</td>
       <td>0.879351</td>
-      <td>0.878398</td>
+      <td>0.878456</td>
       <td>0.875596</td>
-      <td>0.881848</td>
+      <td>0.881792</td>
       <td>0.878146</td>
-      <td>0.002389</td>
+      <td>0.002373</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>0.006116</td>
-      <td>0.000493</td>
-      <td>0.001227</td>
-      <td>0.000239</td>
+      <th>3</th>
+      <td>0.006718</td>
+      <td>0.000712</td>
+      <td>0.002056</td>
+      <td>0.000326</td>
       <td>27</td>
       <td>88</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 88}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
       <td>0.855072</td>
-      <td>0.009263</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>0.005595</td>
-      <td>0.000177</td>
-      <td>0.000935</td>
-      <td>0.000057</td>
+      <th>4</th>
+      <td>0.006797</td>
+      <td>0.000255</td>
+      <td>0.002010</td>
+      <td>0.000148</td>
       <td>31</td>
       <td>64</td>
       <td>{'max_depth': 31, 'min_samples_leaf': 64}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
       <td>0.855072</td>
-      <td>0.009263</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.861363</td>
-      <td>0.860030</td>
-      <td>0.001482</td>
+      <td>0.861296</td>
+      <td>0.860031</td>
+      <td>0.001460</td>
     </tr>
     <tr>
-      <td>5</td>
-      <td>0.005174</td>
-      <td>0.000221</td>
-      <td>0.000970</td>
-      <td>0.000108</td>
+      <th>5</th>
+      <td>0.006190</td>
+      <td>0.000399</td>
+      <td>0.001954</td>
+      <td>0.000372</td>
       <td>27</td>
       <td>89</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 89}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
       <td>0.855072</td>
-      <td>0.009263</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.860410</td>
+      <td>0.860343</td>
       <td>0.859840</td>
-      <td>0.001355</td>
+      <td>0.001340</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>0.005926</td>
-      <td>0.000298</td>
-      <td>0.000915</td>
-      <td>0.000082</td>
+      <th>6</th>
+      <td>0.006717</td>
+      <td>0.000831</td>
+      <td>0.001709</td>
+      <td>0.000241</td>
       <td>22</td>
       <td>42</td>
       <td>{'max_depth': 22, 'min_samples_leaf': 42}</td>
       <td>0.849524</td>
       <td>0.836190</td>
-      <td>0.857143</td>
+      <td>0.856870</td>
       <td>...</td>
-      <td>0.845538</td>
-      <td>0.015713</td>
+      <td>0.845540</td>
+      <td>0.015574</td>
       <td>9</td>
       <td>0.866476</td>
       <td>0.865999</td>
-      <td>0.862661</td>
+      <td>0.862726</td>
       <td>0.865110</td>
-      <td>0.864221</td>
+      <td>0.864156</td>
       <td>0.864893</td>
-      <td>0.001357</td>
+      <td>0.001343</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>0.005121</td>
-      <td>0.000166</td>
-      <td>0.000889</td>
-      <td>0.000115</td>
+      <th>7</th>
+      <td>0.007102</td>
+      <td>0.000530</td>
+      <td>0.002045</td>
+      <td>0.000352</td>
       <td>21</td>
       <td>62</td>
       <td>{'max_depth': 21, 'min_samples_leaf': 62}</td>
       <td>0.849524</td>
       <td>0.840000</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
-      <td>0.850496</td>
-      <td>0.009910</td>
+      <td>0.850500</td>
+      <td>0.009778</td>
       <td>8</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.861363</td>
-      <td>0.860030</td>
-      <td>0.001482</td>
+      <td>0.861296</td>
+      <td>0.860031</td>
+      <td>0.001460</td>
     </tr>
     <tr>
-      <td>8</td>
-      <td>0.005034</td>
-      <td>0.000097</td>
-      <td>0.000801</td>
-      <td>0.000064</td>
+      <th>8</th>
+      <td>0.006462</td>
+      <td>0.000648</td>
+      <td>0.001755</td>
+      <td>0.000131</td>
       <td>20</td>
       <td>64</td>
       <td>{'max_depth': 20, 'min_samples_leaf': 64}</td>
       <td>0.849524</td>
       <td>0.862857</td>
-      <td>0.862857</td>
+      <td>0.862595</td>
       <td>...</td>
       <td>0.855072</td>
-      <td>0.009263</td>
+      <td>0.009121</td>
       <td>1</td>
       <td>0.862184</td>
       <td>0.858369</td>
-      <td>0.858846</td>
+      <td>0.858913</td>
       <td>0.859390</td>
-      <td>0.861363</td>
-      <td>0.860030</td>
-      <td>0.001482</td>
+      <td>0.861296</td>
+      <td>0.860031</td>
+      <td>0.001460</td>
     </tr>
   </tbody>
 </table>
@@ -19243,7 +15988,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_RandomSearch</span> <span class="o">=</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -19339,7 +16084,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_opt</span> <span class="kn">import</span> <span class="n">BayesianOptimization</span>
@@ -19370,7 +16115,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">optimize_DecisionTree</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -19403,7 +16148,7 @@ Accuracy Random Search: 0.8430
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_BayesianOptimization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> 
@@ -19440,13 +16185,13 @@ Accuracy Random Search: 0.8430
 |  2        |  0.849    |  73.47    |  60.27    |
 |  3        |  0.8524   |  16.45    |  16.44    |
 |  4        |  0.8551   |  6.75     |  86.75    |
-|  5        |  0.8551   |  1.56     |  99.21    |
-|  6        |  0.8551   |  2.084    |  88.69    |
-|  7        |  0.8551   |  1.206    |  97.77    |
-|  8        |  0.8551   |  1.452    |  98.8     |
-|  9        |  0.8551   |  1.165    |  98.39    |
+|  5        |  0.8551   |  22.46    |  67.29    |
+|  6        |  0.8551   |  21.86    |  65.88    |
+|  7        |  0.8242   |  100.0    |  1.0      |
+|  8        |  0.8551   |  100.0    |  100.0    |
+|  9        |  0.8551   |  1.0      |  37.51    |
 =================================================
-{&#39;target&#39;: 0.8550626526908692, &#39;params&#39;: {&#39;max_depth&#39;: 38.07947176588889, &#39;min_samples_leaf&#39;: 95.1207163345817}}
+{&#39;target&#39;: 0.8550716103235187, &#39;params&#39;: {&#39;max_depth&#39;: 38.07947176588889, &#39;min_samples_leaf&#39;: 95.1207163345817}}
 </pre>
 </div>
 </div>
@@ -19458,7 +16203,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">BayesianOptimization</span><span class="o">.</span><span class="n">max</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
@@ -19472,7 +16217,7 @@ Accuracy Random Search: 0.8430
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_BO</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
@@ -19487,7 +16232,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_BayesianOptimization</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_BO</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -19540,7 +16285,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_depth_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -19579,7 +16324,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>100%|██████████| 29/29 [00:07&lt;00:00,  4.08it/s]
+<pre>100%|██████████| 29/29 [00:07&lt;00:00,  3.87it/s]
 </pre>
 </div>
 </div>
@@ -19597,7 +16342,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -19628,7 +16373,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
