@@ -4,6 +4,13 @@ from optuna.integration import LightGBMPruningCallback
 from optuna.pruners import MedianPruner
 import lightgbm as lgb
 
+#%%
+
+lgb_data_train = ...
+
+
+#%%
+
 
 def objective(trial):
 
@@ -13,7 +20,6 @@ def objective(trial):
     params = {
         "objective": "binary",
         "boosting": boosting_type,
-        "verbosity": -1,
         "max_depth": trial.suggest_int("max_depth", 2, 63),
         "min_child_weight": trial.suggest_loguniform("min_child_weight", 1e-5, 10),
         "scale_pos_weight": trial.suggest_uniform("scale_pos_weight", 10.0, 30.0),
@@ -40,6 +46,8 @@ def objective(trial):
     trial.set_user_attr("num_boost_round", num_boost_round)
     return cv_res["auc-mean"][-1]
 
+
+#%%
 
 study = optuna.create_study(
     direction="maximize",

@@ -14433,7 +14433,6 @@ div.jp-OutputPrompt {
 <li>Random search</li>
 <li>Bayesian optimization</li>
 <li>"Full" scan over parameter space</li>
-<li>Other Examples</li>
 <li>New methods</li>
 <li>New software</li>
 </ol>
@@ -14994,12 +14993,12 @@ Name: Class, dtype: int64</pre>
 
 
 
-<div id="0395fd11-e0f5-4e63-9953-ed0c688ac783" class="jupyter-widgets jp-OutputArea-output ">
+<div id="7594e99d-b470-4271-b4e5-2384691af056" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
+var element = document.getElementById('7594e99d-b470-4271-b4e5-2384691af056');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f9ed873e496641a3bf4b5bb93644e12b", "version_major": 2, "version_minor": 0}
+{"model_id": "36db44a7abe343a2acbcc32f15fab072", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -15093,7 +15092,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_GridSearch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
@@ -15109,7 +15108,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_DecisionTree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -15123,7 +15122,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf_DecisionTree</span><span class="p">,</span> 
@@ -15142,7 +15141,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">);</span>
@@ -15156,7 +15155,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>        
@@ -15170,7 +15169,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grid Search: </span><span class="se">\t</span><span class="s2">Best parameters: &quot;</span><span class="p">,</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;, Best scores: </span><span class="si">{</span><span class="n">GridSearch</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -15206,7 +15205,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">GridSearch_results</span>
@@ -15225,7 +15224,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -15274,10 +15273,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.004925</td>
-      <td>0.001046</td>
-      <td>0.002223</td>
-      <td>0.000399</td>
+      <td>0.005102</td>
+      <td>0.000639</td>
+      <td>0.002594</td>
+      <td>0.000403</td>
       <td>1</td>
       <td>1</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 1}</td>
@@ -15298,10 +15297,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>1</th>
-      <td>0.003653</td>
-      <td>0.000179</td>
-      <td>0.001789</td>
-      <td>0.000120</td>
+      <td>0.004017</td>
+      <td>0.000224</td>
+      <td>0.001985</td>
+      <td>0.000203</td>
       <td>1</td>
       <td>10</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 10}</td>
@@ -15322,10 +15321,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>2</th>
-      <td>0.005686</td>
-      <td>0.001406</td>
-      <td>0.002249</td>
-      <td>0.000334</td>
+      <td>0.003981</td>
+      <td>0.000184</td>
+      <td>0.002032</td>
+      <td>0.000143</td>
       <td>1</td>
       <td>100</td>
       <td>{'max_depth': 1, 'min_samples_leaf': 100}</td>
@@ -15346,10 +15345,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>3</th>
-      <td>0.010776</td>
-      <td>0.001106</td>
-      <td>0.002222</td>
-      <td>0.000257</td>
+      <td>0.009814</td>
+      <td>0.000601</td>
+      <td>0.002597</td>
+      <td>0.000631</td>
       <td>10</td>
       <td>1</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 1}</td>
@@ -15370,10 +15369,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>4</th>
-      <td>0.007944</td>
-      <td>0.000422</td>
-      <td>0.001771</td>
-      <td>0.000186</td>
+      <td>0.007223</td>
+      <td>0.000293</td>
+      <td>0.001487</td>
+      <td>0.000102</td>
       <td>10</td>
       <td>10</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 10}</td>
@@ -15394,10 +15393,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>5</th>
-      <td>0.005493</td>
-      <td>0.001068</td>
-      <td>0.001597</td>
-      <td>0.000138</td>
+      <td>0.004744</td>
+      <td>0.000105</td>
+      <td>0.001399</td>
+      <td>0.000045</td>
       <td>10</td>
       <td>100</td>
       <td>{'max_depth': 10, 'min_samples_leaf': 100}</td>
@@ -15418,10 +15417,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>6</th>
-      <td>0.010335</td>
-      <td>0.000349</td>
-      <td>0.002156</td>
-      <td>0.000335</td>
+      <td>0.007954</td>
+      <td>0.000232</td>
+      <td>0.001423</td>
+      <td>0.000053</td>
       <td>100</td>
       <td>1</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 1}</td>
@@ -15442,10 +15441,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>7</th>
-      <td>0.008219</td>
-      <td>0.000351</td>
-      <td>0.001902</td>
-      <td>0.000194</td>
+      <td>0.006953</td>
+      <td>0.000127</td>
+      <td>0.001446</td>
+      <td>0.000126</td>
       <td>100</td>
       <td>10</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 10}</td>
@@ -15466,10 +15465,10 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
     </tr>
     <tr>
       <th>8</th>
-      <td>0.005478</td>
-      <td>0.000339</td>
-      <td>0.001637</td>
-      <td>0.000150</td>
+      <td>0.004694</td>
+      <td>0.000175</td>
+      <td>0.001362</td>
+      <td>0.000077</td>
       <td>100</td>
       <td>100</td>
       <td>{'max_depth': 100, 'min_samples_leaf': 100}</td>
@@ -15503,7 +15502,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_GridSearch</span> <span class="o">=</span> <span class="n">GridSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -15517,7 +15516,7 @@ var element = document.getElementById('0395fd11-e0f5-4e63-9953-ed0c688ac783');
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_GridSearch</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_GridSearch</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -15602,7 +15601,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># specify parameters and distributions to sample from</span>
@@ -15618,7 +15617,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run randomized search</span>
@@ -15640,7 +15639,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fit the random search instance</span>
@@ -15655,7 +15654,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">RandomSearch</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>                 
@@ -15691,7 +15690,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RandomSearch_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -15710,7 +15709,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -15759,10 +15758,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.007620</td>
-      <td>0.000491</td>
-      <td>0.002112</td>
-      <td>0.000128</td>
+      <td>0.008011</td>
+      <td>0.000384</td>
+      <td>0.002213</td>
+      <td>0.000154</td>
       <td>23</td>
       <td>72</td>
       <td>{'max_depth': 23, 'min_samples_leaf': 72}</td>
@@ -15783,10 +15782,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.006599</td>
-      <td>0.000702</td>
-      <td>0.002401</td>
-      <td>0.001041</td>
+      <td>0.005741</td>
+      <td>0.000415</td>
+      <td>0.001563</td>
+      <td>0.000170</td>
       <td>26</td>
       <td>83</td>
       <td>{'max_depth': 26, 'min_samples_leaf': 83}</td>
@@ -15807,10 +15806,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.010909</td>
-      <td>0.001371</td>
-      <td>0.003310</td>
-      <td>0.000847</td>
+      <td>0.006873</td>
+      <td>0.000361</td>
+      <td>0.001602</td>
+      <td>0.000114</td>
       <td>17</td>
       <td>24</td>
       <td>{'max_depth': 17, 'min_samples_leaf': 24}</td>
@@ -15831,10 +15830,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.006718</td>
-      <td>0.000712</td>
-      <td>0.002056</td>
-      <td>0.000326</td>
+      <td>0.005404</td>
+      <td>0.000093</td>
+      <td>0.001605</td>
+      <td>0.000085</td>
       <td>27</td>
       <td>88</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 88}</td>
@@ -15855,10 +15854,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.006797</td>
-      <td>0.000255</td>
-      <td>0.002010</td>
-      <td>0.000148</td>
+      <td>0.005871</td>
+      <td>0.000143</td>
+      <td>0.001623</td>
+      <td>0.000096</td>
       <td>31</td>
       <td>64</td>
       <td>{'max_depth': 31, 'min_samples_leaf': 64}</td>
@@ -15879,10 +15878,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.006190</td>
-      <td>0.000399</td>
-      <td>0.001954</td>
-      <td>0.000372</td>
+      <td>0.005508</td>
+      <td>0.000117</td>
+      <td>0.001704</td>
+      <td>0.000143</td>
       <td>27</td>
       <td>89</td>
       <td>{'max_depth': 27, 'min_samples_leaf': 89}</td>
@@ -15903,10 +15902,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.006717</td>
-      <td>0.000831</td>
-      <td>0.001709</td>
-      <td>0.000241</td>
+      <td>0.006459</td>
+      <td>0.000463</td>
+      <td>0.001726</td>
+      <td>0.000238</td>
       <td>22</td>
       <td>42</td>
       <td>{'max_depth': 22, 'min_samples_leaf': 42}</td>
@@ -15927,10 +15926,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.007102</td>
-      <td>0.000530</td>
-      <td>0.002045</td>
-      <td>0.000352</td>
+      <td>0.007776</td>
+      <td>0.000548</td>
+      <td>0.002408</td>
+      <td>0.000442</td>
       <td>21</td>
       <td>62</td>
       <td>{'max_depth': 21, 'min_samples_leaf': 62}</td>
@@ -15951,10 +15950,10 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.006462</td>
-      <td>0.000648</td>
-      <td>0.001755</td>
-      <td>0.000131</td>
+      <td>0.006639</td>
+      <td>0.000689</td>
+      <td>0.002059</td>
+      <td>0.000549</td>
       <td>20</td>
       <td>64</td>
       <td>{'max_depth': 20, 'min_samples_leaf': 64}</td>
@@ -15988,7 +15987,7 @@ hyper-parameter optimization"</em> [Bergstra, 2012]</li>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_RandomSearch</span> <span class="o">=</span> <span class="n">RandomSearch</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -16084,7 +16083,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_opt</span> <span class="kn">import</span> <span class="n">BayesianOptimization</span>
@@ -16115,7 +16114,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">optimize_DecisionTree</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -16148,7 +16147,7 @@ Accuracy Random Search: 0.8430
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters_BayesianOptimization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> 
@@ -16203,7 +16202,7 @@ Accuracy Random Search: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">BayesianOptimization</span><span class="o">.</span><span class="n">max</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
@@ -16217,7 +16216,7 @@ Accuracy Random Search: 0.8430
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf_BO</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
@@ -16232,7 +16231,7 @@ Accuracy Random Search: 0.8430
 </div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy_BayesianOptimization</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf_BO</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
@@ -16285,7 +16284,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_depth_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -16324,7 +16323,7 @@ Accuracy Bayesian Optimization: 0.8430
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>100%|██████████| 29/29 [00:07&lt;00:00,  3.87it/s]
+<pre>100%|██████████| 29/29 [00:08&lt;00:00,  3.61it/s]
 </pre>
 </div>
 </div>
@@ -16342,7 +16341,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -16404,50 +16403,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Part-E:-Other-Examples">Part E: Other Examples<a class="anchor-link" href="#Part-E:-Other-Examples">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Some of my own examples:</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./images/Ex1.png" alt="Example 1" width="800"/></p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./images/Ex2.png" alt="Example 2" width="600"/></p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./images/Ex3.png" alt="Example 3" width="600"/></p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./images/Ex4.png" alt="Example 4" width="800"/></p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Learning rate</li>
-</ul>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Part-F:-New-Methods">Part F: New Methods<a class="anchor-link" href="#Part-F:-New-Methods">&#182;</a></h2><p>Bayesian Optimization meets HyperBand (BOHB)</p>
+<h2 id="Part-E:-New-Methods">Part E: New Methods<a class="anchor-link" href="#Part-E:-New-Methods">&#182;</a></h2><p>Bayesian Optimization meets HyperBand (BOHB)</p>
 
 </div>
 </div></section><section>
@@ -16470,12 +16426,122 @@ Accuracy Bayesian Optimization: 0.8430
 <p><strong><a href="https://www.automl.org/blog_bohb/">BOHB: Robust and Efficient Hyperparameter Optimization at Scale</a></strong></p>
 
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Part-G:-New-Software">Part G: New Software<a class="anchor-link" href="#Part-G:-New-Software">&#182;</a></h2><p>Optuna (see code)</p>
+<h2 id="Part-F:-New-Software">Part F: New Software<a class="anchor-link" href="#Part-F:-New-Software">&#182;</a></h2><p>Optuna (see code)</p>
 
 </div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna.samplers</span> <span class="kn">import</span> <span class="n">TPESampler</span>
+<span class="kn">from</span> <span class="nn">optuna.integration</span> <span class="kn">import</span> <span class="n">LightGBMPruningCallback</span>
+<span class="kn">from</span> <span class="nn">optuna.pruners</span> <span class="kn">import</span> <span class="n">MedianPruner</span>
+<span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
+
+<span class="c1">#%%</span>
+
+<span class="n">lgb_data_train</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+
+    <span class="n">boosting_types</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gbdt&quot;</span><span class="p">,</span> <span class="s2">&quot;rf&quot;</span><span class="p">,</span> <span class="s2">&quot;dart&quot;</span><span class="p">]</span>
+    <span class="n">boosting_type</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s2">&quot;boosting_type&quot;</span><span class="p">,</span> <span class="n">boosting_types</span><span class="p">)</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;objective&quot;</span><span class="p">:</span> <span class="s2">&quot;binary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;boosting&quot;</span><span class="p">:</span> <span class="n">boosting_type</span><span class="p">,</span>
+        <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s2">&quot;max_depth&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">63</span><span class="p">),</span>
+        <span class="s2">&quot;min_child_weight&quot;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s2">&quot;min_child_weight&quot;</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="s2">&quot;scale_pos_weight&quot;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s2">&quot;scale_pos_weight&quot;</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">),</span>
+    <span class="p">}</span>
+
+    <span class="n">N_iterations_max</span> <span class="o">=</span> <span class="mi">10_000</span>
+    <span class="n">early_stopping_rounds</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="k">if</span> <span class="n">boosting_type</span> <span class="o">==</span> <span class="s2">&quot;dart&quot;</span><span class="p">:</span>
+        <span class="n">N_iterations_max</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="n">early_stopping_rounds</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">cv_res</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">cv</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span>
+        <span class="n">lgb_data_train</span><span class="p">,</span>
+        <span class="n">num_boost_round</span><span class="o">=</span><span class="n">N_iterations_max</span><span class="p">,</span>
+        <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="n">early_stopping_rounds</span><span class="p">,</span>
+        <span class="n">verbose_eval</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+        <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">LightGBMPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s2">&quot;auc&quot;</span><span class="p">)],</span>
+    <span class="p">)</span>
+
+    <span class="n">num_boost_round</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cv_res</span><span class="p">[</span><span class="s2">&quot;auc-mean&quot;</span><span class="p">])</span>
+    <span class="n">trial</span><span class="o">.</span><span class="n">set_user_attr</span><span class="p">(</span><span class="s2">&quot;num_boost_round&quot;</span><span class="p">,</span> <span class="n">num_boost_round</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cv_res</span><span class="p">[</span><span class="s2">&quot;auc-mean&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;maximize&quot;</span><span class="p">,</span>
+    <span class="n">sampler</span><span class="o">=</span><span class="n">TPESampler</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+    <span class="n">pruner</span><span class="o">=</span><span class="n">MedianPruner</span><span class="p">(</span><span class="n">n_warmup_steps</span><span class="o">=</span><span class="mi">50</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-green-fg">[I 2021-05-05 12:45:02,243]</span> A new study created in memory with name: no-name-0cabd40c-f7e5-49ca-9c67-fb4fad9a8305
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -16484,7 +16550,7 @@ Accuracy Bayesian Optimization: 0.8430
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><a href="http://bit.ly/AppliedMachineLearning">http://bit.ly/AppliedMachineLearning</a></strong></p>
+<p><strong><a href="https://github.com/ChristianMichelsen/HyperParameterOptimizationPresentation">github.com/ChristianMichelsen/HyperParameterOptimizationPresentation</a></strong></p>
 
 </div>
 </div></div></section></section>
