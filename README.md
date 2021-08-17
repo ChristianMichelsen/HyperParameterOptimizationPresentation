@@ -1,5 +1,5 @@
 # Hyperparameter Optimization Presentation
-Hyperparameter optimization presentation given May 5th, 2021, at the master level course Big Data Analysis / Applied Machine Learning (University of Copenhagen).
+Hyperparameter optimization presentation given August 19th, 2021, at the master level course Big Data Analysis / Applied Machine Learning (University of Copenhagen).
 The course has be previously given:
 - May 5th, 2021
 - April 29th, 2020
